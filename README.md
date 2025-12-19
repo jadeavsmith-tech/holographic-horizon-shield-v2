@@ -9,12 +9,25 @@ MIT-licensed • Built in Python • Early prototype with real-time dashboard
 [![Stars](https://img.shields.io/github/stars/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/stargazers)
 [![Forks](https://img.shields.io/github/forks/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/network/members)
 
-## Epic Visuals
+## Epic Visuals 🛡️🌌
 
-![Holographic Horizon Shield Dashboard](images/shield-cyberpunk-1.png)
+![Holographic Horizon Shield Dashboard](IMG_8410.jpeg)
 
-Cyberpunk-inspired prototype dashboard—real-time threat simulation with layered holographic shields.
+**Core dashboard concept** — "Horizon Shield v2" in action: Layered holographic boundary with Phi-3 powered gauges monitoring threats in real-time.
 
+![Neon Threat Simulation Interface](IMG_8411.jpeg)
+
+**Adversarial scanning panel** — Cyberpunk neon gauges and circular event horizon simulator detecting injections and poisoning.
+
+![Multi-Panel Threat Heatmaps](IMG_8412.jpeg)
+
+**Advanced analytics view** — Holographic graphs and crystalline data flows visualizing multi-stage shield activations.
+
+![Interactive Holographic Control](IMG_8413.jpeg)
+
+**Command interface** — Touch-activated floating UI for running simulations and boundary checks.
+
+(Animated live dashboard and more renders coming soon 👀)
 ![Holographic Boundary Scan](images/shield-cyberpunk-2.png)
 
 Visualizing the "event horizon" boundary in action.
