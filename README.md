@@ -37,6 +37,20 @@ MIT-licensed • Built in Python • Early prototype with real-time dashboard
    python shield_v2_dashboard.py
    4. Commit message: "Final polish: Embed epic visuals + clean README"
 5. Save > Hard refresh the page.
+6. ## Quick Start 🚀
+
+Get the Holographic Horizon Shield v2 up and running in minutes:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
+   cd holographic-horizon-shield-v2
+   pip install -r requirements.txt
+   python shield_v2_prototype.py
+   python shield_v2_dashboard.py
+   This keeps it focused purely on setup, flows logically, and looks sharp on GitHub. The little rocket emoji and closing line add a touch of your project's sci-fi flair without going overboard.
+
+If you want any tweaks (e.g., adding notes about Phi-3 setup, environment recommendations, or example commands), just let me know! 🛡️🌌
 
 Done—the images will render full-size and beautiful inline! The repo will look next-level professional.
 
