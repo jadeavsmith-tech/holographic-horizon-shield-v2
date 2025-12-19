@@ -2,3 +2,4 @@ torch
 transformers
 accelerate
 streamlit  # For interactive dashboard
+pyyaml
