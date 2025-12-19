@@ -38,3 +38,13 @@ AI safety doesn't have to be boring—this is defense with style. 🌠
    ```bash
    git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
    cd holographic-horizon-shield-v2
+(Continue from your current Quick Start...)
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   python shield_v2_prototype.py
+   python shield_v2_dashboard.py
+   ## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
