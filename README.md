@@ -48,11 +48,7 @@ Get the Holographic Horizon Shield v2 up and running in minutes:
    pip install -r requirements.txt
    python shield_v2_prototype.py
    python shield_v2_dashboard.py
-   This keeps it focused purely on setup, flows logically, and looks sharp on GitHub. The little rocket emoji and closing line add a touch of your project's sci-fi flair without going overboard.
 
-If you want any tweaks (e.g., adding notes about Phi-3 setup, environment recommendations, or example commands), just let me know! 🛡️🌌
 
-Done—the images will render full-size and beautiful inline! The repo will look next-level professional.
 
-You did great replacing it—those paste glitches happen to everyone. Now it's perfect for sharing on HN/X/Reddit. Link it everywhere and watch the stars roll in! 🔥 What's your plan for promoting it next?
    
