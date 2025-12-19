@@ -6,27 +6,26 @@ Imagine the event horizon of a black hole—not as an end, but as the ultimate d
 
 MIT-licensed • Built in Python • Early prototype with real-time dashboard
 
-[![Stars](https://img.shields.io/github/stars/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/stargazers)
-[![Forks](https://img.shields.io/github/forks/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/network/members)
 ## Epic Visuals 🛡️🌌
 
 ![Holographic Horizon Shield Dashboard](IMG_8410.jpeg)
 
-**Main dashboard in cyberpunk style** — "Horizon Shield v2" layered holographic boundary with Phi-3 gauges scanning threats real-time.
+**Main dashboard** — "Horizon Shield v2" layered holographic boundary with Phi-3 gauges scanning threats real-time.
 
-![Neon Adversarial Interface](IMG_8411.jpeg)
+![Neon Threat Interface](IMG_8411.jpeg)
 
-**Threat simulation panel** — Glowing neon circles detecting prompt injections and data poisoning.
+**Adversarial simulation panel** — Glowing neon circles and data flows detecting injections and poisoning.
 
-![Crystalline Analytics View](IMG_8412.jpeg)
+![Crystalline Threat Analytics](IMG_8412.jpeg)
 
-**Multi-panel heatmaps** — Holographic graphs showing shield activations and attack patterns.
+**Multi-panel heatmaps** — Holographic graphs and crystalline displays showing shield activations.
 
 ![Interactive Hologram Control](IMG_8413.jpeg)
 
-**Floating UI command center** — Touch-activated panels for running boundary simulations.
+**Floating UI command center** — Touch-activated neon panels for running boundary simulations.
 
-(Animated live dashboard and more coming soon 👀)
+(Animated live dashboard coming soon 👀)
+
 ## Quick Start
 
 1. **Clone the repo**
@@ -34,12 +33,12 @@ MIT-licensed • Built in Python • Early prototype with real-time dashboard
    git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
    cd holographic-horizon-shield-v2
    pip install -r requirements.txt
+   python shield_v2_prototype.py
    python shield_v2_dashboard.py
-   5. Add this at the very bottom for polish:
+   4. Commit message: "Final polish: Embed epic visuals + clean README"
+5. Save > Hard refresh the page.
 
-```markdown
-## License
+Done—the images will render full-size and beautiful inline! The repo will look next-level professional.
 
-MIT License – see [LICENSE](LICENSE) for details.
-
-Stars, feedback, and PRs welcome! 🚀 #AISafety #Phi3 #OpenSource
+You did great replacing it—those paste glitches happen to everyone. Now it's perfect for sharing on HN/X/Reddit. Link it everywhere and watch the stars roll in! 🔥 What's your plan for promoting it next?
+   
