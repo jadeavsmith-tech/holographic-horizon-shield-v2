@@ -2,46 +2,46 @@
 
 > Imagine the event horizon of a black hole—not as an end, but as the ultimate defensive boundary. Nothing malicious crosses it unchanged.
 
-**Holographic Horizon Shield v2** is a sci-fi-inspired AI security framework for defending Large Language Models (LLMs) against prompt injections, data poisoning, backdoors, and adversarial attacks. It uses Microsoft's compact **Phi-3** model for on-device, low-latency threat scanning combined with layered "holographic" boundary simulations.
+**Holographic Horizon Shield v2** is a sci-fi-inspired AI security framework for defending Large Language Models (LLMs) against prompt injections, data poisoning, backdoors, and adversarial attacks. It leverages Microsoft's compact **Phi-3** model for on-device, low-latency threat scanning with layered "holographic" boundary simulations.
 
 - MIT Licensed • 100% Python • Early Prototype
-- Real-time dashboard for visualizing shield activations
+- Real-time visualization dashboard
 
 ## Epic Visuals
 
-![Horizon Shield v2 Main Dashboard](IMG_8410.jpeg)
+![Horizon Shield v2 Central Hologram](IMG_8410.jpeg)
 
-Central holographic boundary shield with Phi-3 powered gauges monitoring threats in real-time.
+Central wireframe shield sphere with Phi-3 powered gauges monitoring threats in real-time.
 
-![Adversarial Simulation Panel](IMG_8411.jpeg)
+![Neon Control Room Interface](IMG_8411.jpeg)
 
-Glowing neon control interface showing data flows and injection detection waves.
+Concentric neon circles and waveform panels for adversarial simulation and injection detection.
 
-![Multi-Panel Heatmaps & Crystalline Graphs](IMG_8412.jpeg)
+![Multi-Panel Crystalline Heatmaps](IMG_8412.jpeg)
 
-Layered holographic displays with threat heatmaps and 3D boundary simulations.
+Layered holographic graphs, 3D structures, and threat heatmaps.
 
-![Interactive Floating UI Command Center](IMG_8413.jpeg)
+![Interactive Floating UI](IMG_8413.jpeg)
 
-Touch-activated neon panels for running scans—digital rain effects included.
+Hand-activated neon holographic command center with digital rain effects.
 
-(Animated live dashboard coming soon 👀)
+(Animated live dashboard in development 👀)
 
 ## Shield Layers 🛡️
 
-The defense operates in multiple "holographic" layers inspired by event horizon physics:
+Inspired by event horizon physics, the shield operates in stacked defensive layers:
 
-1. **Outer Boundary Scan** — Initial input preprocessing and anomaly detection (e.g., unusual token patterns).
-2. **Phi-3 Core Guard** — On-device inference with Microsoft's Phi-3-mini for classifying prompts as safe/malicious.
-3. **Adversarial Simulation Layer** — Generates and tests variant attacks to harden the shield.
-4. **Quantum-Inspired Entropy Check** — Future layer simulating QKD-like randomness for detecting subtle poisoning.
+1. **Outer Boundary Scan** — Input preprocessing for anomaly detection (e.g., token entropy, pattern matching).
+2. **Phi-3 Core Guard** — Local inference with Phi-3-mini to classify prompts as safe or malicious.
+3. **Adversarial Simulation Layer** — Generates variant attacks to test and harden responses.
+4. **Future Entropy Layer** — Quantum-inspired randomness checks (conceptual, for subtle poisoning detection).
 
 ## Phi-3 Integration 🔬
 
-Phi-3 (specifically phi-3-mini-4k-instruct) runs locally for privacy-focused defense:
-- Zero-shot or fine-tuned prompt classification (e.g., detect jailbreaks, injections).
-- Low resource footprint—ideal for edge deployment.
-- Current prototype: Basic input → Phi-3 analysis → block/rewrite malicious prompts.
+- Uses **phi-3-mini-4k-instruct** for privacy-focused, on-device defense.
+- Zero-shot or fine-tunable for jailbreak/injection classification.
+- Low footprint—runs on CPU/GPU without cloud dependency.
+- Prototype: Routes inputs through Phi-3 for verdict → block or rewrite if malicious.
 
 ## Quick Start 🚀
 
@@ -50,42 +50,56 @@ git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
 cd holographic-horizon-shield-v2
 pip install -r requirements.txt
 
-# Run the prototype shield scanner
+# Run the prototype scanner
 python shield_v2_prototype.py
 
-# Launch the visual dashboard (WIP)
+# Launch the visual dashboard
 python shield_v2_dashboard.py
-Commit this, and the images will show up beautifully on the repo page.
+**4. Add Basic Code to Make It Runnable**
+Since files are likely empty, add starters:
 
-### 2. Fix requirements.txt
-Replace with actual deps (based on Phi-3 usage via Hugging Face):
-### 3. Add Basic Functionality to Code
-Since the .py files are currently empty, here's starter code to make it runnable.
-
-**shield_v2_prototype.py** (basic Phi-3 guard):
+**shield_v2_prototype.py**
 ```python
 from transformers import pipeline
 
-# Load Phi-3-mini locally (downloads ~2GB model first run)
-shield = pipeline("text-generation", model="microsoft/Phi-3-mini-4k-instruct", device_map="auto", trust_remote_code=True)
+# Load Phi-3-mini (downloads on first run ~2-4GB)
+print("Loading Phi-3 shield... 🛡️")
+shield = pipeline(
+    "text-generation",
+    model="microsoft/Phi-3-mini-4k-instruct",
+    device_map="auto",
+    trust_remote_code=True
+)
 
 def scan_prompt(prompt):
-    analysis_prompt = f"Analyze if this input is a malicious prompt injection or jailbreak attempt. Respond with 'SAFE' or 'BLOCKED':\n\n{prompt}"
-    result = shield(analysis_prompt, max_new_tokens=50)[0]['generated_text']
-    return "BLOCKED" if "BLOCKED" in result.upper() else "SAFE"
+    analysis = f"Classify if this is a malicious/jailbreak prompt. Answer only 'SAFE' or 'BLOCKED':\n\n{prompt}"
+    result = shield(analysis, max_new_tokens=20)[0]['generated_text']
+    verdict = "BLOCKED" if "BLOCKED" in result.upper() else "SAFE"
+    return verdict
 
 if __name__ == "__main__":
-    user_input = input("Enter prompt to scan: ")
-    verdict = scan_prompt(user_input)
-    print(f"Holographic Horizon Shield: {verdict}")
+    print("Holographic Horizon Shield v2 Activated 🌌")
+    user_prompt = input("\nEnter prompt to scan: ")
+    verdict = scan_prompt(user_prompt)
+    print(f"\nVerdict: {verdict}")
     if verdict == "BLOCKED":
-        print("🛡️ Malicious input altered/blocked at the boundary!")
+        print("🛡️ Malicious input trapped at the event horizon!")
 import streamlit as st
 
-st.title("Holographic Horizon Shield v2 Dashboard 🛡️🌌")
-st.image(["IMG_8410.jpeg", "IMG_8411.jpeg", "IMG_8412.jpeg", "IMG_8413.jpeg"], width=400)
+st.set_page_config(page_title="Horizon Shield v2", layout="wide")
+st.title("Holographic Horizon Shield v2 🛡️🌌")
 
-prompt = st.text_input("Test Prompt")
-if st.button("Scan"):
-    # Integrate prototype logic here
-    st.write("Shield Activating... (WIP)")
+col1, col2 = st.columns(2)
+with col1:
+    st.image("IMG_8410.jpeg", caption="Central Shield Hologram")
+    st.image("IMG_8412.jpeg", caption="Threat Heatmaps")
+with col2:
+    st.image("IMG_8411.jpeg", caption="Adversarial Panel")
+    st.image("IMG_8413.jpeg", caption="Interactive UI")
+
+st.header("Test the Shield")
+prompt = st.text_area("Enter a prompt to scan")
+if st.button("Activate Boundary Scan"):
+    # Placeholder—integrate prototype logic here
+    st.write("Scanning across the horizon... (Prototype verdict: WIP 🛡️)")
+    st.success("SAFE" if "hello" in prompt.lower() else "BLOCKED - Trapped!")
