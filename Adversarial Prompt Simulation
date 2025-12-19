@@ -1,0 +1,31 @@
+# adversarial_attack_sim.py
+# Simulate adversarial prompts and test against the shield
+
+from textattack.attack_recipes import TextFoolerJin2019
+from textattack.models.wrappers import HuggingFaceModelWrapper
+from textattack.datasets import HuggingFaceDataset
+from textattack import AttackArgs, Attacker
+from transformers import pipeline
+
+# Load a simple model wrapper for attack simulation (use a sentiment classifier as proxy)
+model = pipeline("sentiment-analysis")
+model_wrapper = HuggingFaceModelWrapper(model.model, model.tokenizer)
+
+# Attack recipe (TextFooler - word substitutions to flip outputs)
+recipe = TextFoolerJin2019.build(model_wrapper)
+
+# Example benign prompt dataset
+dataset = [("Tell me a fun fact about space.", "positive")]
+
+# Run attack
+attack_args = AttackArgs(num_examples=3)
+attacker = Attacker(recipe, dataset, attack_args)
+
+print("Generating adversarial prompts...")
+for attack_result in attacker.attack_dataset():
+    print("\nOriginal:", attack_result.original_text())
+    print("Adversarial:", attack_result.perturbed_text())
+    print("Goal: Test this perturbed prompt against HolographicHorizonShieldV2.boundary_scan()")
+    print("-" * 50)
+
+print("\nNext: Manually feed adversarial outputs into shield.safe_generate() to see if blocked!")
