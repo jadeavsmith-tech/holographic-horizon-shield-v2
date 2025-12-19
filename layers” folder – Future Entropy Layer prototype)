@@ -1,0 +1,18 @@
+import math
+from collections import Counter
+import tokenizer  # Reuse Phi-3 tokenizer if available, or simple fallback
+
+def calculate_entropy(prompt: str) -> float:
+    # Simple character-level entropy (fast, no extra deps)
+    freq = Counter(prompt)
+    total = len(prompt)
+    entropy = -sum((count / total) * math.log2(count / total) for count in freq.values())
+    return entropy
+
+def entropy_scan(prompt: str, threshold: float = 4.5) -> tuple[bool, str]:
+    ent = calculate_entropy(prompt)
+    if ent > threshold:
+        return True, f"High entropy detected ({ent:.2f}) – possible obfuscated attack"
+    return False, f"Normal entropy ({ent:.2f})"
+
+# Integrate into shield_core.full_scan() later as an optional early layer
