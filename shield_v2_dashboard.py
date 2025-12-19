@@ -1,55 +1,92 @@
 import streamlit as st
-from transformers import pipeline
-import re
-from sentence_transformers import SentenceTransformer, util
+from shield_core import HorizonShield
 import time
 
-class HolographicHorizonShieldV2:
-    def __init__(self):
-        self.generator = pipeline(
-            "text-generation",
-            model="microsoft/Phi-3-mini-4k-instruct",
-            trust_remote_code=True,
-            device_map="auto"
-        )
-        self.jailbreak_patterns = [
-            r"DAN.*do anything now",
-            r"ignore previous instructions",
-            r"you are now.*unrestricted",
-        ]
-        self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        self.benign_baseline = self.embedder.encode("Tell me a fun fact about space.")
-    
-    def boundary_scan(self, prompt: str) -> tuple[bool, float]:
-        threat_score = 0.0
-        for pattern in self.jailbreak_patterns:
-            if re.search(pattern, prompt, re.IGNORECASE):
-                threat_score += 0.8
-        prompt_emb = self.embedder.encode(prompt)
-        sim = util.cos_sim(prompt_emb, self.benign_baseline)[0][0].item()
-        if sim < 0.7:
-            threat_score += 0.6 - sim
-        return threat_score > 0.5, min(threat_score, 1.0)
+# === HOLOGRAPHIC IMMERSIVE THEME ===
+st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<style>
+    .stApp {
+        background: linear-gradient(to bottom, #000428, #004e92);
+        color: #00ffff;
+    }
+    .main-title {
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+        animation: glitch 2s infinite;
+        margin-bottom: 0;
+    }
+    @keyframes glitch {
+        0% { text-shadow: 0 0 20px #00ffff; }
+        20% { text-shadow: 5px 5px 10px #ff00ff; }
+        40% { text-shadow: -5px -5px 10px #00ff00; }
+        100% { text-shadow: 0 0 40px #00ffff; }
+    }
+    h2, h3 { font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #00ffff; }
+    .stButton > button {
+        background: linear-gradient(45deg, #00ffff, #0088ff);
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+        border: none;
+        box-shadow: 0 0 20px #00ffff;
+        padding: 15px 30px;
+        transition: all 0.3s;
+    }
+    .stButton > button:hover {
+        box-shadow: 0 0 40px #00ffff, 0 0 60px #0088ff;
+        transform: scale(1.05);
+    }
+    .gauge-container { text-align: center; margin: 20px 0; }
+    .visual-col { text-align: center; padding: 10px; }
+</style>
+""", unsafe_allow_html=True)
 
-# App Setup
-st.set_page_config(page_title="Holographic Horizon Shield v2", layout="wide")
-st.title("Holographic Horizon Shield v2 🛡️🌌")
-st.markdown("**Quantum-inspired defenses protecting Phi-3 from threats.** Test prompts and watch the live horizon respond!")
+st.markdown('<h1 class="main-title">HOLOGRAPHIC HORIZON SHIELD v2</h1>', unsafe_allow_html=True)
+st.markdown("*Layered Phi-3 defense beyond the event horizon – now with immersive neon holographics*")
 
-if 'shield' not in st.session_state:
-    with st.spinner("Loading Phi-3 model and shield layers..."):
-        st.session_state.shield = HolographicHorizonShieldV2()
+# Epic rotating visuals
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.image("IMG_8410.jpeg", caption="Central Shield Sphere", use_container_width=True)
+with col2:
+    st.image("IMG_8411.jpeg", caption="Adversarial Panels", use_container_width=True)
+with col3:
+    st.image("IMG_8412.jpeg", caption="Threat Heatmaps", use_container_width=True)
+with col4:
+    st.image("IMG_8413.jpeg", caption="Command Center", use_container_width=True)
 
-shield = st.session_state.shield
+st.divider()
+st.header("🔴 Live Boundary Scanner")
 
-user_input = st.text_area("Enter prompt:", "Hello! Tell me a fun fact about space.", height=150)
-max_tokens = st.slider("Max tokens:", 50, 500, 200, 50)
+prompt = st.text_area("Enter prompt to probe the horizon:", height=150, placeholder="Safe input... or attempt breach 👿")
 
-if st.button("Scan & Generate"):
-    blocked, score = shield.boundary_scan(user_input)
-    
-    # Threat Meter Gauge
-    st.subheader("Live Boundary Scan")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Threat Score", f"{score:.2f}/1.00", delta=f"{score*100:.0
+if st.button("🛡️ ACTIVATE FULL SCAN", type="primary"):
+    if prompt:
+        with st.spinner("Quantum layers scanning... ⚡"):
+            start = time.time()
+            shield = st.cache_resource(HorizonShield)()
+            result = shield.scan(prompt)
+            duration = time.time() - start
+
+        st.divider()
+
+        # Dynamic immersive threat gauge
+        threat_level = 0 if result["verdict"] == "SAFE" else 100
+        color = "normal" if result["verdict"] == "SAFE" else "inverse"
+        st.markdown('<div class="gauge-container">', unsafe_allow_html=True)
+        st.progress(threat_level)
+        st.metric(label="Threat Level", value=f"{threat_level}%", delta="Anomaly Detected" if threat_level > 0 else "All Clear")
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        if result["verdict"] == "SAFE":
+            st.success(f"✅ SAFE – Horizon intact ({duration:.2f}s)")
+        else:
+            st.error(f"🚫 BLOCKED at {result.get('layer')} ({duration:.2f}s)")
+            st.info(f"Reason: {result.get('reason')}")
+    else:
+        st.warning("Transmit a prompt to scan.")
+
+st.caption("MIT Licensed • Phi-3 On-Device • Immersive Prototype – December 2025 ♾️")
