@@ -1,6 +1,0 @@
-torch>=2.3.0
-transformers>=4.40.0
-streamlit>=1.30.0
-accelerate>=0.30.0
-# Optional for lower VRAM (uncomment if needed)
-# bitsandbytes>=0.43.0
