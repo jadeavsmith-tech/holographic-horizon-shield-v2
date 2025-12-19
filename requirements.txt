@@ -1,0 +1,7 @@
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+streamlit>=1.28.0
+regex>=2023.10.3
+# Optional for future adversarial sim
+# textattack>=0.3.9
