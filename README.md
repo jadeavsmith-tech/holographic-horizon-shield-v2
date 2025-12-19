@@ -16,20 +16,19 @@ Refs: [Original Holographic Horizon Shield repo](https://github.com/...original-
 
 ## Epic Visuals
 
-![Central Wireframe Shield Sphere](IMG_8410.jpeg)
+![Central holographic shield sphere with Phi-3 gauges monitoring incoming threats](IMG_8410.jpeg)
 *Central holographic shield sphere with Phi-3 gauges monitoring incoming threats*
 
-![Adversarial Simulation Panels](IMG_8411.jpeg)
+![Neon control interface for adversarial attack simulation](IMG_8411.jpeg)
 *Neon control interface for adversarial attack simulation*
 
-![Threat Heatmaps & Holographic Graphs](IMG_8412.jpeg)
+![Layered threat detection visualization with waveform heatmaps](IMG_8412.jpeg)
 *Layered threat detection visualization with waveform heatmaps*
 
-![Interactive Holographic Command Center](IMG_8413.jpeg)
+![Hand-activated neon UI with digital rain and boundary effects](IMG_8413.jpeg)
 *Hand-activated neon UI with digital rain and boundary effects*
 
 (Full interactive animated dashboard coming soon 👀)
-
 ## The Project Story 🌌
 
 Born from the idea that LLM vulnerabilities resemble event horizons—points of no return where malicious inputs warp responses irreparably. Traditional guards are reactive; Holographic Horizon Shield is **proactive and layered**, trapping threats at progressive boundaries like gravitational layers around a singularity.
