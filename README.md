@@ -48,8 +48,5 @@ python shield_v2_prototype.py
 
 # Launch interactive dashboard (with live entropy visualization)
 streamlit run shield_v2_dashboard.py
-Replace entire README, commit as "Holographic embed + cleanup 🔥" — visuals pop instantly.
+To avoid conflicts: Refresh page → edit → select all → paste this → commit directly to main.
 
-Refresh deploy app — if import fixed, it's live. Then swap README links.
-
-Super close — one paste + refresh = singularity. Drop live URL when up! 🚀
