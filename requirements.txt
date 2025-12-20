@@ -1,6 +1,5 @@
-torch>=2.3.0
-transformers>=4.40.0
-streamlit>=1.30.0
-accelerate>=0.30.0
-# Optional for lower VRAM GPUs: uncomment if needed
-# bitsandbytes>=0.43.0
+torch>=2.0
+transformers>=4.40
+streamlit
+accelerate
+einops  # Phi-3 dependency
