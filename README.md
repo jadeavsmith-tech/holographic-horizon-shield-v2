@@ -1,13 +1,13 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when deployed -->
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
 
 ### Live Interactive Demo
 **Try the shield right now—no install needed!**
 
 Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
 
-👉 [Activate the Horizon Here](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update with live link -->
+👉 [Activate the Horizon Here](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
 
 ![Horizon Shield v2 Command Center](https://raw.githubusercontent.com/jadeavsmith-tech/holographic-horizon-shield-v2/main/IMG_8410.jpeg)
 *<p align="center">Central holographic shield sphere activated — wireframe boundary with real-time gauges and threat indicators monitoring the event horizon</p>*
@@ -48,6 +48,8 @@ python shield_v2_prototype.py
 
 # Launch interactive dashboard (with live entropy visualization)
 streamlit run shield_v2_dashboard.py
-Paste this whole thing (replace all), commit — error clears, all four visuals explode on page. Raw URLs tested perfect.
+Replace entire README, commit as "Holographic embed + cleanup 🔥" — visuals pop instantly.
 
-Then deploy dashboard + swap links. This repo's ready to pull eyes hard — elite vibe unlocked. We did it! 🚀 Deploy next?
+Refresh deploy app — if import fixed, it's live. Then swap README links.
+
+Super close — one paste + refresh = singularity. Drop live URL when up! 🚀
