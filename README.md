@@ -1,23 +1,18 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_ACTUAL_STREAMLIT_URL_HERE or # for now)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_URL_HERE)
 
 ### Live Interactive Demo
 **Try the shield right now—no install needed!**
 
 Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
 
-👉 [Activate the Horizon Here](https://YOUR_ACTUAL_STREAMLIT_URL_HERE or # for now)
+👉 [Activate the Horizon Here](https://YOUR_REAL_URL_HERE)
 
 ![Dashboard in Action](dashboard_demo.gif)  
 *<p align="center">Real-time entropy heatmap spiking on a jailbreak attempt → shield blocks with layered verdict + PII redaction</p>*
 
 ---
-![Horizon Shield v2 Command Center](IMG_8410.jpeg)
-*<p align="center">Central holographic shield sphere with real-time gauges and threat indicators monitoring the event horizon</p>*
-
-![Horizon Shield v2 Command Center](IMG_8410.jpeg)
-*<p align="center">Central holographic shield sphere activated — wireframe boundary with real-time gauges and threat indicators monitoring the event horizon</p>*
 
 **Local-first LLM defenses with Phi-3 integration, boundary scans, and quantum-inspired entropy layers**
 
