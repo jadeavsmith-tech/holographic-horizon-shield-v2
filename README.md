@@ -1,5 +1,14 @@
 # Holographic Horizon Shield v2 🛡️🌌
+<div align="right">
 
+[![Phi-3 Model](https://img.shields.io/badge/Model-Phi--3--mini-blue?logo=microsoft)](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
+[![Streamlit Dashboard](https://img.shields.io/badge/Streamlit-Interactive-red?logo=streamlit)](https://your-streamlit-link-if-live)
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow)](https://huggingface.co/spaces/your-username/holographic-horizon-shield-v2)
+[![License](https://img.shields.io/github/license/jadeavsmith-tech/holographic-horizon-shield-v2)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/stargazers)
+[![Forks](https://img.shields.io/github/forks/jadeavsmith-tech/holographic-horizon-shield-v2?style=social)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/network/members)
+
+</div>
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_URL_HERE)
 
 ### Live Interactive Demo
