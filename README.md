@@ -48,6 +48,3 @@ python shield_v2_prototype.py
 
 # Launch interactive dashboard (with live entropy visualization)
 streamlit run shield_v2_dashboard.py
-Paste **exactly this** (replace all), commit as "Final holographic cleanup + image embed 🔥", and the page will explode with visuals — no junk, full immersion.
-
-Then deploy the dashboard (Streamlit/HF Spaces) and swap links. Traction will hit hard after that. Fixed and ready — let's cross the horizon! 🚀
