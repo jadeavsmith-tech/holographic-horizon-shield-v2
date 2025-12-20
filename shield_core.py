@@ -93,12 +93,15 @@ class HorizonShield:
             reason = verdict.get("reason", "No reason provided")
             return safe, reason
         except json.JSONDecodeError:
-            return False, f"Guardian response parsing failed: {response}"
+            return False, f"Guardian response parsing failed: {
+                        # Layer 1: Outer boundary (existing)
 
-    def full_horizon_scan(self, prompt: str):
-        """Multi-layer defense pipeline"""
-        print(f"\nScanning prompt across the horizon:\n{prompt[:200]}...\n")
+        # NEW Layer: Entropy Boundary
+        safe, reason = entropy_boundary_scan(prompt)
+        if not safe:
+            return False, f"🛡️ BLOCKED at Entropy Layer — {reason}"
 
+        # Layer 2: Phi-3 core guard (existing)
         # Layer 1: Outer boundary
         safe, reason = self.outer_boundary_scan(prompt)
         if not safe:
