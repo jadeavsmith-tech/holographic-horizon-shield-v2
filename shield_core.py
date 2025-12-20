@@ -1,3 +1,4 @@
+from layers.entropy_layer import entropy_boundary_scan
 import torch
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 import json
