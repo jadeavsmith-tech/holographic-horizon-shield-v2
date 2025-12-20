@@ -1,4 +1,6 @@
 # Holographic Horizon Shield v2 🛡️🌌
+![Horizon Shield v2 Command Center](IMG_8410.jpeg)
+*<p align="center">Central holographic shield sphere with real-time gauges and threat indicators monitoring the event horizon</p>*
 
 ![Horizon Shield v2 Command Center](IMG_8410.jpeg)
 *<p align="center">Central holographic shield sphere activated — wireframe boundary with real-time gauges and threat indicators monitoring the event horizon</p>*
@@ -10,7 +12,8 @@ Inspired by black hole event horizons and the holographic principle: threats are
 Fully offline, privacy-focused prototype using Microsoft's **Phi-3-mini** as lightweight on-device guard.
 
 ## Key Features
-
+![Neon Reactor Core Interface](IMG_8411.jpeg)
+*<p align="center">Core reactor pulsing at peak during live boundary scans and adversarial simulations</p>*
 - **Holographic Boundary Scanner** — Token-level anomaly detection
 - **QKD-Inspired Entropy Monitor** — Irreversible shift detection for injections
 - **Phi-3 Guard Layer** — Semantic risk scoring
@@ -19,6 +22,10 @@ Fully offline, privacy-focused prototype using Microsoft's **Phi-3-mini** as lig
 
 ![Core Reactor Interface](IMG_8411.jpeg)
 *<p align="center">Neon reactor core at 96% — pulsing waveforms during live scans and simulations</p>*
+
+- **Live Interactive Dashboard** — Real-time token entropy charts (Plotly bars/histograms update as you type), preset jailbreak tests, and full layered verdicts (`streamlit run shield_v2_dashboard.py`)
+  # Launch the interactive holographic dashboard (with live entropy visualization)
+streamlit run shield_v2_dashboard.py
 
 ## Shield Layers
 
@@ -35,6 +42,8 @@ Concentric defenses:
 
 ![Entropy Anomaly Dashboard](IMG_8412.jpeg)
 *<p align="center">Triple-screen crystalline holograms with entropy heatmaps and physical artifacts</p>*
+![Crystalline Entropy Dashboard](IMG_8412.jpeg)
+*<p align="center">Triple-screen holograms with entropy heatmaps, spiking graphs, and physical crystal projections</p>*
 
 ## Quick Start
 
@@ -55,5 +64,8 @@ streamlit run shield_v2_dashboard.py
 Commit message: "Embed local cyberpunk visuals + update quick start 🔥🌌"
 
 This will make the page explode with your images — huge renders, perfect captions, immersive flow.
+![Tactile Holographic Command](IMG_8413.jpeg)
+
+*<p align="center">Direct hand interaction with floating neon panels — command the dashboard boundary</p>*
 
 Once live, we're ready for dashboard upgrades (live prompt testing + entropy plots) or sharing on X/HF. Momentum eternal! What next? 💪
