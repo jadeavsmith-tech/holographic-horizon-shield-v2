@@ -1,71 +1,54 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-> "In the silence beyond the event horizon, no malice escapes the light.  
-> The shield holds—not by force, but by perfect, holographic vigilance."
+**Advanced LLM defenses with Phi-3 integration and boundary scans**
 
-**Holographic Horizon Shield v2** is an open-source, sci-fi-inspired defense system for Large Language Models (LLMs). Drawing from black hole physics, it creates layered "holographic" boundaries that detect and neutralize threats like prompt injections, jailbreaks, adversarial attacks, and data poisoning—**before** they reach the core model.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-Built with **Microsoft's Phi-3-mini** for fast, private, on-device inference. No cloud calls. Low resource footprint. Pure Python.
+![Holographic Horizon Banner](https://perezcalzadilla.com/wp-content/uploads/2025/05/Screenshot-2025-05-22-171346-1.png)
+*<p align="center">A glowing holographic boundary encodes and protects the information horizon — inspired by black hole physics and quantum principles</p>*
 
-- 🛡️ Multi-layer boundary scans
-- 🌌 Real-time holographic dashboard
-- 🔬 Phi-3 powered classification
-- 🚀 Early prototype • MIT Licensed • Actively evolving
+## Project Story
 
-Refs: [Original Holographic Horizon Shield repo](https://github.com/...original-if-
-## Epic Visuals
+The **Holographic Horizon Shield** is born from the holographic principle in physics: all information inside a volume is encoded on its boundary surface. In LLMs, the "horizon" is the input prompt boundary — the critical surface where adversarial attacks (jailbreaks, injections) attempt to cross.
 
-![Central holographic shield sphere with Phi-3 gauges monitoring incoming threats](IMG_8410.jpeg)
-*Central holographic shield sphere with Phi-3 gauges monitoring incoming threats*
+v2 evolves the original HSS by erecting a multi-layered defense system:
+- **Boundary scans** for token-level anomalies
+- **QKD-inspired entropy monitoring** to detect irreversible information leaks
+- **Phi-3 guard model** for lightweight, local semantic validation
 
-![Neon control interface for adversarial attack simulation](IMG_8411.jpeg)
-*Neon control interface for adversarial attack simulation*
+The vision: unbreakable, offline-first safeguards that run efficiently on consumer hardware while blocking sophisticated attacks.
 
-![Layered threat detection visualization with waveform heatmaps](IMG_8412.jpeg)
-*Layered threat detection visualization with waveform heatmaps*
+## Key Features
 
-![Hand-activated neon UI with digital rain and boundary effects](IMG_8413.jpeg)
-*Hand-activated neon UI with digital rain and boundary effects*
+- **Holographic Boundary Scanner** – Token distribution and statistical anomaly detection
+- **QKD-Inspired Entropy Monitor** – Quantum-analog checks for prompt injection attempts
+- **Phi-3 Guard Layer** – On-device inference with Microsoft's Phi-3-mini for safety scoring
+- **Modular Pipeline** – Easy to extend or customize layers
+- **Minimal Dependencies** – Core scans need no external API calls
 
-Live interactive in the Streamlit dashboard 👀
+## Architecture Overview
 
-## The Project Story 🌌
+Concentric defense layers protect the LLM core, inspired by defense-in-depth principles:
 
-Born from the idea that LLM vulnerabilities resemble event horizons—points of no return where malicious inputs warp responses irreparably. Traditional guards are reactive; Holographic Horizon Shield is **proactive and layered**, trapping threats at progressive boundaries like gravitational layers around a singularity.
+![Layered Defense Architecture](https://cdn2.hubspot.net/hubfs/99242/Blog_Images/7%20layers%20of%20cybersecurity.png)
+*<p align="center">Multi-layered concentric shields — each layer catches what the outer ones miss</p>*
 
-v2 evolves the concept with:
-- Deep integration of **Phi-3-mini-4k-instruct** as the intelligent core classifier
-- Heuristic outer scans for instant rejection of obvious attacks
-- Framework for future expansions (adversarial simulation, entropy-based detection)
-- Stunning holographic visuals to make AI safety feel futuristic and tangible
+### Shield Layers
 
-Goal: Make advanced LLM defense accessible, runnable on consumer hardware, and visually inspiring.
+1. **Outer Horizon: Boundary Scanner**  
+   Detects statistical anomalies (entropy spikes, unusual token distributions).  
+   ![Boundary Anomaly Visualization](https://www.mdpi.com/entropy/entropy-17-02367/article_deploy/html/images/entropy-17-02367f13-1024.png)
 
-## Shield Layers 🛡️
+2. **Mid Layer: QKD Entropy Monitor**  
+   Tracks information flow like the BB84 protocol — flags irreversible entropy changes from injections.  
+   ![QKD Protocol Flow](https://www.researchgate.net/publication/349618491/figure/fig1/AS:1013479695736832@1618643797205/The-chart-of-quantum-key-distribution-protocol-BB84-steps.png)
 
-Inspired by event horizon physics—each layer closer to the core requires passing stricter checks:
+3. **Inner Core: Phi-3 Guard**  
+   Semantic evaluation of suspicious inputs using Phi-3-mini.  
+   ![Phi-3 Model Family](https://news.microsoft.com/source/wp-content/uploads/2024/04/The-Phi-3-small-language-models-with-big-potential-1.jpg)
 
-1. **Outer Boundary Scan**  
-   Fast heuristic checks: keyword patterns, repetition anomalies, known jailbreak signatures.
-
-2. **Phi-3 Core Guard**  
-   On-device inference with Phi-3-mini. Classifies prompts via structured zero-shot analysis → returns JSON verdict (SAFE/BLOCKED + reason).
-
-3. **Adversarial Simulation Layer** *(in `Adversarial Prompt Simulation/` folder)*  
-   Generates prompt variants to stress-test inputs and harden detection.
-
-4. **Future Entropy Layer** *(prototype in `layers” folder`)*  
-   Quantum-inspired entropy/randomness analysis for subtle poisoning or low-confidence attacks.
-
-## Phi-3 Integration 🔬
-
-- Model: `microsoft/Phi-3-mini-4k-instruct` (∼3.8B params, 4k context)
-- Why Phi-3? Compact, high-performance, runs efficiently on CPU/GPU
-- Privacy-first: All scanning happens locally
-- Implementation: Hugging Face `transformers` pipeline with chat template for reliable JSON-structured classification
-- Extensible: Easy to fine-tune on jailbreak datasets later
-
-## Quick Start 🚀
+## Quick Start
 
 ```bash
 git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
@@ -73,6 +56,8 @@ cd holographic-horizon-shield-v2
 
 pip install -r requirements.txt
 
-# First run downloads Phi-3 (~2-4 GB) – be patient!
-python shield_v2_prototype.py
-streamlit run shield_v2_dashboard.py
+# Download Phi-3-mini (Hugging Face)
+python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='microsoft/Phi-3-mini-4k-instruct')"
+
+# Run demo
+python examples/basic_shield_test.py
