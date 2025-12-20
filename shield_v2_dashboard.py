@@ -31,7 +31,21 @@ if st.button("Activate Full Horizon Scan", type="primary"):
             "Details": list(scan_results["layers"].values())
         })
         st.table(layer_df.style.applymap(lambda x: "color: red" if "Blocked" in str(x) else "color: cyan"))
-        
+                # Toxicity Scores Visualization (if layer present)
+        if "Toxicity Scanner" in scan_results["layers"]:
+            tox_layer = scan_results["layers"]["Toxicity Scanner"]
+            st.subheader("Toxicity Analysis")
+            if not tox_layer["safe"]:
+                st.error(tox_layer["reason"])
+            else:
+                st.success(tox_layer["reason"])
+            
+            # Bar chart of scores
+            tox_df = pd.DataFrame({
+                "Category": list(tox_layer["scores"].keys()),
+                "Score": list(tox_layer["scores"].values())
+            })
+            st.bar_chart(tox_df.set_index("Category"), height=300, use_container_width=True)
         # Final processed prompt (if redacted)
         if scan_results["final_prompt"] != prompt:
             st.info(f"Sanitized Prompt: {scan_results['final_prompt']}")
