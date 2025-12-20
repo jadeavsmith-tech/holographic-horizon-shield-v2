@@ -69,3 +69,6 @@ This will make the page explode with your images — huge renders, perfect capti
 *<p align="center">Direct hand interaction with floating neon panels — command the dashboard boundary</p>*
 
 Once live, we're ready for dashboard upgrades (live prompt testing + entropy plots) or sharing on X/HF. Momentum eternal! What next? 💪
+
+![Tactile Holographic Command](IMG_8413.jpeg)
+*<p align="center">Direct hand interaction with floating neon panels in digital rain — command the dashboard</p>*
