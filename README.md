@@ -1,7 +1,7 @@
 # Holographic Horizon Shield v2 🛡️🌌
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_LIVE_DEMO_URL_HERE)
 [![Hugging Face Spaces](https://img.shields.io/badge/🤗-Hugging%20Face%20Spaces-blue)](YOUR_HF_SPACE_URL_HERE) <!-- Optional if you deploy there too -->
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_ACTUAL_STREAMLIT_URL_HERE)
 # Holographic Horizon Shield v2 🛡️🌌
 ### Live Interactive Demo
 **Try the shield right now—no install needed!**  
