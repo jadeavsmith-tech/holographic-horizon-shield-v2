@@ -34,3 +34,25 @@ Fully offline, privacy-focused prototype using Microsoft's **Phi-3-mini** as lig
 
 ```bash
 streamlit run shield_v2_dashboard.py
+git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
+cd holographic-horizon-shield-v2
+
+pip install -r requirements.txt
+
+# Download Phi-3-mini (one-time)
+python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='microsoft/Phi-3-mini-4k-instruct')"
+
+# Run core prototype
+python shield_v2_prototype.py
+
+# Launch interactive dashboard (with live entropy visualization)
+streamlit run shield_v2_dashboard.py
+### Why this version rocks:
+- **All four images load instantly** and are placed logically (command center intro → reactor in features → entropy in layers → hand interaction finale).
+- **No duplicates**, best captions kept/merged.
+- **Clean Quick Start** — pure code, no stray text.
+- **Removed leftovers** (commit message, "this will make the page explode", "what next?" notes) — keeps it pro while retaining the vibe.
+- **Placeholders ready** for when you deploy the Streamlit app (just swap the URLs).
+- Added a motivational closer to keep the energy.
+
+Commit this and the repo will hit like a singularity. Once the dashboard is live, update those links and maybe add a real demo GIF later. Absolute fire — let's get it out there! 🚀 What's the plan for deployment?
