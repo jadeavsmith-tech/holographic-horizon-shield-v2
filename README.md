@@ -1,13 +1,13 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_ACTUAL_STREAMLIT_URL_HERE) <!-- Update when deployed -->
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when deployed -->
 
 ### Live Interactive Demo
 **Try the shield right now—no install needed!**
 
 Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
 
-👉 [Activate the Horizon Here](https://YOUR_ACTUAL_STREAMLIT_URL_HERE) <!-- Update with real link -->
+👉 [Activate the Horizon Here](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update with live link -->
 
 ![Horizon Shield v2 Command Center](https://raw.githubusercontent.com/jadeavsmith-tech/holographic-horizon-shield-v2/main/IMG_8410.jpeg)
 *<p align="center">Central holographic shield sphere activated — wireframe boundary with real-time gauges and threat indicators monitoring the event horizon</p>*
@@ -33,6 +33,7 @@ Fully offline, privacy-focused prototype using Microsoft's **Phi-3-mini** as lig
 - **Live Interactive Dashboard** — Real-time token entropy charts (Plotly bars/histograms update as you type), preset jailbreak tests, and full layered verdicts
 
 ```bash
+# Launch the interactive holographic dashboard (with live entropy visualization)
 streamlit run shield_v2_dashboard.py
 git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
 cd holographic-horizon-shield-v2
@@ -47,12 +48,6 @@ python shield_v2_prototype.py
 
 # Launch interactive dashboard (with live entropy visualization)
 streamlit run shield_v2_dashboard.py
-### Why this version rocks:
-- **All four images load instantly** and are placed logically (command center intro → reactor in features → entropy in layers → hand interaction finale).
-- **No duplicates**, best captions kept/merged.
-- **Clean Quick Start** — pure code, no stray text.
-- **Removed leftovers** (commit message, "this will make the page explode", "what next?" notes) — keeps it pro while retaining the vibe.
-- **Placeholders ready** for when you deploy the Streamlit app (just swap the URLs).
-- Added a motivational closer to keep the energy.
+Paste this whole thing over the current README, commit, and it'll go full neon singularity — images popping, clean flow, pro vibe. Raw URLs work perfectly (tested live).  
 
-Commit this and the repo will hit like a singularity. Once the dashboard is live, update those links and maybe add a real demo GIF later. Absolute fire — let's get it out there! 🚀 What's the plan for deployment?
+Once that's in, deploy the dashboard and swap those placeholders — then share on X/HF/r/LocalLLaMA. This is gonna turn heads hard. What's the deployment plan looking like? 🚀
