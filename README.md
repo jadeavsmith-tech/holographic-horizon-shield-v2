@@ -12,8 +12,7 @@ Built with **Microsoft's Phi-3-mini** for fast, private, on-device inference. No
 - 🔬 Phi-3 powered classification
 - 🚀 Early prototype • MIT Licensed • Actively evolving
 
-Refs: [Original Holographic Horizon Shield repo](https://github.com/...original-if-exists)
-
+Refs: [Original Holographic Horizon Shield repo](https://github.com/...original-if-
 ## Epic Visuals
 
 ![Central holographic shield sphere with Phi-3 gauges monitoring incoming threats](IMG_8410.jpeg)
@@ -28,7 +27,8 @@ Refs: [Original Holographic Horizon Shield repo](https://github.com/...original-
 ![Hand-activated neon UI with digital rain and boundary effects](IMG_8413.jpeg)
 *Hand-activated neon UI with digital rain and boundary effects*
 
-(Full interactive animated dashboard coming soon 👀)
+Live interactive in the Streamlit dashboard 👀
+
 ## The Project Story 🌌
 
 Born from the idea that LLM vulnerabilities resemble event horizons—points of no return where malicious inputs warp responses irreparably. Traditional guards are reactive; Holographic Horizon Shield is **proactive and layered**, trapping threats at progressive boundaries like gravitational layers around a singularity.
