@@ -1,13 +1,16 @@
 # Holographic Horizon Shield v2 🛡️🌌
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_LIVE_DEMO_URL_HERE)
-[![Hugging Face Spaces](https://img.shields.io/badge/🤗-Hugging%20Face%20Spaces-blue)](YOUR_HF_SPACE_URL_HERE) <!-- Optional if you deploy there too -->
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_ACTUAL_STREAMLIT_URL_HERE)
-# Holographic Horizon Shield v2 🛡️🌌
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_ACTUAL_STREAMLIT_URL_HERE or # for now)
+
 ### Live Interactive Demo
-**Try the shield right now—no install needed!**  
+**Try the shield right now—no install needed!**
+
 Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
 
-👉 [Activate the Horizon Here](YOUR_LIVE_DEMO_URL_HERE)
+👉 [Activate the Horizon Here](https://YOUR_ACTUAL_STREAMLIT_URL_HERE or # for now)
+
+![Dashboard in Action](dashboard_demo.gif)  
+*<p align="center">Real-time entropy heatmap spiking on a jailbreak attempt → shield blocks with layered verdict + PII redaction</p>*
 
 ---
 ![Horizon Shield v2 Command Center](IMG_8410.jpeg)
