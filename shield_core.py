@@ -1,3 +1,4 @@
+from layers.pii_layer import pii_detection_scan  # New PII layer import
 from layers.entropy_layer import entropy_boundary_scan
 from layers.pii_layer import pii_detection_scan  # New import
 
