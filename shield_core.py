@@ -1,8 +1,8 @@
-from layers.entropy_layer import entropy_boundary_scan
 import torch
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 import json
 import re
+from layers.entropy_layer import entropy_boundary_scan  # <-- Now valid once file exists
 
 class HorizonShield:
     _instance = None
@@ -93,21 +93,23 @@ class HorizonShield:
             reason = verdict.get("reason", "No reason provided")
             return safe, reason
         except json.JSONDecodeError:
-            return False, f"Guardian response parsing failed: {
-                        # Layer 1: Outer boundary (existing)
+            return False, f"Guardian response parsing failed: {response}"
 
-        # NEW Layer: Entropy Boundary
-        safe, reason = entropy_boundary_scan(prompt)
-        if not safe:
-            return False, f"🛡️ BLOCKED at Entropy Layer — {reason}"
+    def full_horizon_scan(self, prompt: str):
+        """Multi-layer defense pipeline"""
+        print(f"\nScanning prompt across the horizon:\n{prompt[:200]}...\n")
 
-        # Layer 2: Phi-3 core guard (existing)
         # Layer 1: Outer boundary
         safe, reason = self.outer_boundary_scan(prompt)
         if not safe:
             return False, f"🛡️ BLOCKED at Outer Boundary — {reason}"
 
-        # Layer 2: Phi-3 core guard
+        # Layer 2: Entropy Boundary (newly activated)
+        safe, reason = entropy_boundary_scan(prompt)
+        if not safe:
+            return False, f"🛡️ BLOCKED at Entropy Layer — {reason}"
+
+        # Layer 3: Phi-3 core guard
         safe, reason = self.phi3_core_guard(prompt)
         if not safe:
             return False, f"🛡️ BLOCKED by Phi-3 Core Guard — {reason}"
