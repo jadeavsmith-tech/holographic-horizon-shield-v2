@@ -1,16 +1,7 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
-
-👉 Activate the Horizon Here Coming soon — deploying now! -->
-Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
-
-👉 [Activate the Horizon Here](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
-
-![Horizon Shield v2 Command Center](https://raw.githubusercontent.com/jadeavsmith-tech/holographic-horizon-shield-v2/main/IMG_8410.jpeg)
+![Central holographic shield sphere activated](https://raw.githubusercontent.com/jadeavsmith-tech/holographic-horizon-shield-v2/main/IMG_8410.jpeg)
 *<p align="center">Central holographic shield sphere activated — wireframe boundary with real-time gauges and threat indicators monitoring the event horizon</p>*
-
----
 
 **Local-first LLM defenses with Phi-3 integration, boundary scans, and quantum-inspired entropy layers**
 
@@ -18,33 +9,39 @@ Inspired by black hole event horizons and the holographic principle: threats are
 
 Fully offline, privacy-focused prototype using Microsoft's **Phi-3-mini** as lightweight on-device guard.
 
-## Key Features
+### Live Interactive Demo
+
+Try the shield right now — no install needed!
+
+Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts — all in the neon holographic dashboard.
+
+👉 [Activate the Horizon Here](https://holographic-horizon-shield-v2.streamlit.app)
+
+*(Replace the URL above with your actual Streamlit link after deployment)*
 
 ![Neon Reactor Core Interface](https://raw.githubusercontent.com/jadeavsmith-tech/holographic-horizon-shield-v2/main/IMG_8411.jpeg)
 *<p align="center">Neon reactor core at 96% — pulsing waveforms during live boundary scans and adversarial simulations</p>*
+
+## Key Features
 
 - **Holographic Boundary Scanner** — Token-level anomaly detection
 - **QKD-Inspired Entropy Monitor** — Irreversible shift detection for injections
 - **Phi-3 Guard Layer** — Semantic risk scoring
 - **Modular Layers** — Extensible in `layers/`
-- **Real-Time Dashboard** — Interactive monitoring (`shield_v2_dashboard.py`)
-- **Live Interactive Dashboard** — Real-time token entropy charts (Plotly bars/histograms update as you type), preset jailbreak tests, and full layered verdicts
+- **Real-Time Dashboard** — Interactive monitoring with live Plotly entropy charts that update as you type
+- **Preset Jailbreak Tests** — One-click evaluation of classic attacks
+- **PII Redaction & Toxicity Blocking** — Automatic privacy safeguards
+
+## Quick Start
 
 ```bash
-# Launch the interactive holographic dashboard (with live entropy visualization)
-streamlit run shield_v2_dashboard.py
 git clone https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2.git
 cd holographic-horizon-shield-v2
 
 pip install -r requirements.txt
 
-# Download Phi-3-mini (one-time)
+# Download Phi-3-mini (one-time ~3GB)
 python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='microsoft/Phi-3-mini-4k-instruct')"
 
-# Run core prototype
-python shield_v2_prototype.py
-
-# Launch interactive dashboard (with live entropy visualization)
+# Launch the interactive holographic dashboard
 streamlit run shield_v2_dashboard.py
-To avoid conflicts: Refresh page → edit → select all → paste this → commit directly to main.
-
