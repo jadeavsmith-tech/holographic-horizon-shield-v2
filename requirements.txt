@@ -6,3 +6,5 @@ transformers>=4.36.0
 accelerate
 huggingface_hub
 detoxify
+presidio-analyzer
+presidio-anonymizer
