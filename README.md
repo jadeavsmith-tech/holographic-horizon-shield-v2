@@ -2,7 +2,7 @@
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
 
-👉 [Activate the Horizon Here](#)  <!-- Coming soon — deploying now! -->
+👉 Activate the Horizon Here Coming soon — deploying now! -->
 Test classic jailbreaks, watch real-time entropy spikes disintegrate threats, see PII redaction in action, and explore layered verdicts—all in the neon holographic dashboard.
 
 👉 [Activate the Horizon Here](https://YOUR_REAL_STREAMLIT_URL_HERE) <!-- Update when live -->
