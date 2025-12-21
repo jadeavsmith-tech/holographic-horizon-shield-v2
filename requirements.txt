@@ -2,6 +2,7 @@ streamlit>=1.32.0
 pandas>=2.0.0
 plotly>=5.18.0
 torch>=2.0.0
-transformers>=4.40.0
-accelerate>=0.30.0
-huggingface-hub>=0.23.0
+transformers>=4.36.0
+accelerate
+huggingface_hub
+detoxify
