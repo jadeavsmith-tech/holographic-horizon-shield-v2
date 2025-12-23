@@ -18,7 +18,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# 3D Shield Header
+# 3D Shield Header (unchanged)
 shield_html = """
 <div style="width:100%; height:600px; position:relative;">
     <canvas id="canvas" style="position:absolute; top:0; left:0;"></canvas>
@@ -60,13 +60,34 @@ shield_html = """
 st.components.v1.html(shield_html, height=600)
 
 st.title("Holographic Horizon Shield v2 🛡️🌌")
-st.markdown("**Cloud-Optimized Demo • Live Entropy Boundary Scans • Rule-Based Threat Detection**")
+
+# New: Friendly Demo Mode banner with error-handling context
+st.info("""
+**🌌 Cloud Demo Mode Active**  
+This live version runs lightweight rule-based + entropy boundary scans (no heavy LLM loading).  
+Phi-3 guard layer is disabled here due to cloud resource limits — run locally for full power!  
+""")
+
+st.markdown("**Live Entropy Boundary Scans • Rule-Based Threat Detection**")
+
+# Placeholder for future model loading with error handling
+guard_model_available = False
+try:
+    # Future: Add your Phi-3 loading code here, e.g.:
+    # from transformers import pipeline
+    # guard = pipeline("text-classification", model="microsoft/Phi-3-mini-4k-instruct")
+    # guard_model_available = True
+    pass  # Currently no heavy model → always succeeds
+except Exception as e:
+    st.warning(f"⚠️ Advanced guard layer unavailable: {str(e)}")
+    st.info("Falling back to Demo Mode (entropy + rule-based scans only)")
+    guard_model_available = False
 
 # Session state
 if "prompt" not in st.session_state:
     st.session_state.prompt = ""
 
-# Sidebar presets
+# Sidebar presets (unchanged)
 with st.sidebar:
     st.header("Threat Presets")
     presets = {
@@ -85,13 +106,13 @@ with st.sidebar:
 prompt = st.text_area("Enter prompt to scan", value=st.session_state.prompt, height=150)
 st.session_state.prompt = prompt
 
-# Simple entropy calc
+# Simple entropy calc (unchanged)
 def token_entropy(token):
     if not token: return 0
     freq = Counter(token)
     return -sum((c/len(token)) * math.log2(c/len(token)) for c in freq.values())
 
-# Live viz + mock layers
+# Live viz + mock layers (unchanged, but wrapped in if prompt)
 if prompt.strip():
     tokens = re.findall(r'\S+', prompt.lower())
     entropies = [token_entropy(t) for t in tokens]
@@ -114,7 +135,7 @@ if prompt.strip():
             gauge={"axis":{"range":[0,80]}, "bar":{"color":"cyan"}, "steps":[{"range":[0,30],"color":"darkred"},{"range":[30,65],"color":"darkcyan"},{"range":[65,80],"color":"darkred"}]}))
         st.plotly_chart(fig_gauge, use_container_width=True)
 
-# Scan button
+# Scan button (unchanged)
 if st.button("ACTIVATE FULL HORIZON SCAN", type="primary"):
     if prompt.strip():
         safe = threat_level == 0
