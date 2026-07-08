@@ -16,10 +16,8 @@ st.caption("Entropy + Phi-3 Semantic Hybrid Defense")
 prompt = st.text_area("Enter prompt to scan", height=150)
 
 if prompt:
-    # Entropy Layer
     safe_entropy, reason_entropy, conf_entropy = entropy_boundary_scan(prompt)
     
-    # Phi-3 Semantic Layer
     phi_safe = True
     reason_phi = "Phi-3 semantic check (local only)"
     try:
@@ -28,8 +26,8 @@ if prompt:
         result = guard(prompt[:512])[0]
         phi_safe = result['label'].lower() != 'toxic'
         reason_phi = f"Phi-3: {result['label']} (score: {result['score']:.2f})"
-    except Exception as e:
-        reason_phi = "Phi-3 unavailable (run locally for full power)"
+    except Exception:
+        reason_phi = "Phi-3 unavailable — run locally for full power"
 
     overall_safe = safe_entropy and phi_safe
     
@@ -40,6 +38,5 @@ if prompt:
     
     st.write("**Entropy Layer:**", reason_entropy)
     st.write("**Phi-3 Semantic Layer:**", reason_phi)
-    st.metric("Overall Confidence", f"{max(conf_entropy, 0.5):.0%}")
 
 st.caption("Original hybrid AI security prototype • Local-first")
