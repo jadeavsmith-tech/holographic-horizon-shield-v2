@@ -1,16 +1,14 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-**Original hybrid AI security prototype** — local-first LLM defense using quantum-inspired entropy + Phi-3 semantic layers.
+**Original hybrid AI security prototype** — visual "event horizon" defense for LLMs.
 
-Threats are neutralized at the "event horizon" before they reach the model.
+Combines quantum-inspired entropy scanning, Phi-3 semantic guard, and reacting holographic UI.
 
-### Key Features
-- Real-time entropy boundary scanning
-- Phi-3 semantic guard layer
-- OWASP LLM Top 10 awareness
-- Reacting 3D holographic visualization
-- Red Team attack generator
-- Fully offline & privacy-first
+### Why Original
+- Living 3D shield that reacts to threats
+- Hybrid statistical + semantic defense
+- Fully local & private
+- Red Team testing built-in
 
 ### Quick Start
 
