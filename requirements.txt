@@ -1,7 +1,5 @@
-streamlit==1.38.0
-gradio==4.44.0
-plotly==5.24.1
-pandas==2.2.3
-huggingface_hub==0.25.0
-torch==2.4.0
-transformers==4.45.0
+streamlit
+gradio
+plotly
+pandas
+huggingface_hub
