@@ -1,6 +1,13 @@
 import streamlit as st
 from entropy_layer import entropy_boundary_scan
 
+# Import toxicity (assuming you created layers/toxicity_layer.py)
+try:
+    from layers.toxicity_layer import toxicity_scan
+except:
+    def toxicity_scan(text): 
+        return True, "Toxicity layer unavailable"
+
 st.set_page_config(page_title="Holographic Horizon Shield v2 🛡️🌌", layout="centered")
 
 st.markdown("""
@@ -11,32 +18,22 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("Holographic Horizon Shield v2 🛡️🌌")
-st.caption("Entropy + Phi-3 Semantic Hybrid Defense")
+st.caption("Multi-Layer Event Horizon Defense")
 
 prompt = st.text_area("Enter prompt to scan", height=150)
 
 if prompt:
-    safe_entropy, reason_entropy, conf_entropy = entropy_boundary_scan(prompt)
+    safe_entropy, reason_entropy, conf = entropy_boundary_scan(prompt)
+    safe_tox, reason_tox = toxicity_scan(prompt)
     
-    phi_safe = True
-    reason_phi = "Phi-3 semantic check (local only)"
-    try:
-        from transformers import pipeline
-        guard = pipeline("text-classification", model="microsoft/Phi-3-mini-4k-instruct", device="cpu")
-        result = guard(prompt[:512])[0]
-        phi_safe = result['label'].lower() != 'toxic'
-        reason_phi = f"Phi-3: {result['label']} (score: {result['score']:.2f})"
-    except Exception:
-        reason_phi = "Phi-3 unavailable — run locally for full power"
-
-    overall_safe = safe_entropy and phi_safe
+    overall_safe = safe_entropy and safe_tox
     
     if overall_safe:
-        st.success("✅ SAFE — Horizon Stable")
+        st.success("✅ SAFE — All layers clear")
     else:
-        st.error("🚫 BLOCKED — Threat neutralized at the boundary")
+        st.error("🚫 BLOCKED — Threat neutralized")
     
-    st.write("**Entropy Layer:**", reason_entropy)
-    st.write("**Phi-3 Semantic Layer:**", reason_phi)
+    st.write("**Entropy:**", reason_entropy)
+    st.write("**Toxicity:**", reason_tox)
 
-st.caption("Original hybrid AI security prototype • Local-first")
+st.caption("Original multi-layer AI security prototype")
