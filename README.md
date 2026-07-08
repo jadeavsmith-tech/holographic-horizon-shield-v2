@@ -1,8 +1,6 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-**Local-first LLM defense tool** powered by entropy layers and Phi-3.
-
-Protects against jailbreaks, PII leaks, and adversarial prompts.
+**Local-first LLM defense tool** with improved entropy scanning.
 
 ### Quick Start
 
