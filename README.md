@@ -1,10 +1,17 @@
 # holographic-horizon-shield-v2 (HHS-V2)
 
-An asynchronous local LLM boundary defense system orchestrating local token entropy evaluation, token-space geometry state machines, and local small language model (SLM) verification pipelines.
+An asynchronous local MMT LLM boundary defense system orchestrating local token entropy evaluation, token-space geometry state machines, and local small language model (SLM) verification pipelines.
 
 ---
 
-## 🏗️ Architectural Topology
+## 🛠️ System Overview & Core Capabilities
+* **Hybrid Layers**: Entropy + Detoxify + Phi-3 local analysis
+* **Visual Telemetry**: Real-time 3D reacting dashboard (Streamlit)
+* **DevOps Packaging**: Dockerfile + Makefile + pyproject.toml package configuration
+
+---
+
+## 🏗️ MMT LLM Architectural Topology
 
 The framework enforces a stateless, multi-layered firewall mechanism directly preceding downstream inference engines:
 
