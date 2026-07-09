@@ -39,3 +39,36 @@ When an inbound payload breaches the **$9.62\ M_{\odot}$ Event Horizon**, the en
 ## 📜 Intellectual Property Notice
 © 2026 **Jade Siley-Winditt**. All rights reserved.  
 The underlying astrophysical firewall theory, mass threshold limits, and Keplerian active-defense engine designs are protected under international copyright conventions and open-source licensing.
+
+
+## 🛰️ Real-Time Data Trajectory Workflow
+This diagram illustrates how an incoming text string moves through your astrophysical firewall:
+
+```text
+       📥 [USER PROMPT INGESTION]
+                    │
+                    ▼
+     [Layer 1: Structural Token Profiler]
+                    │
+                    ▼
+    [Layer 2: Keplerian Core Calculation Engine]
+         Formula: M = a³ / T²
+         - Variable 'a' (Text Variance Scale)
+         - Constant 'T' (0.508 years / Gaia BH1 Period)
+                    │
+                    ├──► [Calculated Mass < 9.62 M_sun] ──► ✅ [PASSED] ──► 🚀 (To LLM Engine)
+                    │
+                    └──► [Calculated Mass ≥ 9.62 M_sun] ──► 🚨 [HORIZON BREACH]
+                                                                  │
+                                                                  ▼
+                                                      [Layer 3: Active Defense Containment]
+                                                                  │
+                                                                  ▼
+                                                      ⏳ [Asynchronous Tarpit Stall]
+                                                           (asyncio.sleep Delay)
+                                                                  │
+                                                                  ▼
+                                                      🕳️ [STATUS: SINKHOLED]
+                                                           (Attacker Connection Drained)
+```
+
