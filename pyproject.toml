@@ -1,31 +1,25 @@
 [project]
 name = "holographic-horizon-shield"
 version = "2.1.0"
-description = "Living Holographic Geometric Defense for LLMs with Phi-3, entropy, and toxicity layers"
+description = "Living Holographic Geometric Defense for LLMs"
 readme = "README.md"
 license = {text = "GPL-3.0"}
 requires-python = ">=3.10"
 authors = [{name = "Jade Siley-Winditt"}]
-keywords = ["llm", "security", "defense", "phi-3", "geometry", "streamlit", "red-team"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-    "Programming Language :: Python :: 3",
-    "Topic :: Security",
-]
 
 dependencies = [
-    "streamlit>=1.28",
+    "streamlit",
     "torch",
     "transformers",
     "detoxify",
-    # add others from requirements.txt as needed
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-cov", "ruff", "black", "mypy"]
+dev = ["pytest", "ruff", "black", "pytest-cov"]
 
-[project.urls]
-Homepage = "https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2"
-Repository = "https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2"
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["holographic_horizon_shield*"]
+
+[project.scripts]
+hhs-dashboard = "shield_v2_dashboard:main"   # adjust if needed
