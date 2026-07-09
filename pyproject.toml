@@ -1,36 +1,31 @@
 [project]
 name = "holographic-horizon-shield"
-version = "2.0.0"
-description = "Living Holographic Geometric Defense for LLMs - v2 with Phi-3 integration"
+version = "2.1.0"
+description = "Living Holographic Geometric Defense for LLMs with Phi-3, entropy, and toxicity layers"
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "GPL-3.0"}
 requires-python = ">=3.10"
-authors = [
-    {name = "Jade Siley-Winditt", email = "your.email@example.com"}
-]
-keywords = ["llm", "security", "defense", "phi-3", "geometry", "streamlit"]
+authors = [{name = "Jade Siley-Winditt"}]
+keywords = ["llm", "security", "defense", "phi-3", "geometry", "streamlit", "red-team"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
 ]
 
 dependencies = [
-    "streamlit",
+    "streamlit>=1.28",
     "torch",
     "transformers",
-    # Add others from requirements.txt
+    "detoxify",
+    # add others from requirements.txt as needed
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "ruff", "black", "mypy", "pytest-cov"]
+dev = ["pytest", "pytest-cov", "ruff", "black", "mypy"]
 
-[project.scripts]
-hhs-dashboard = "holographic_horizon_shield.ui.dashboard:main"
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.ruff]
-line-length = 100
+[project.urls]
+Homepage = "https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2"
+Repository = "https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2"
