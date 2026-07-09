@@ -22,6 +22,20 @@ Standard production-grade AI security pipelines:
 - **Boundary Filtering**: Streamlit-driven layer that blocks high-risk inputs.
 - **Adaptive Geometry**: Evolving shield (pyramid → sphere → holographic interference).
 - **Red Team Mode**: Generate adversarial attacks for testing.
+- ## 🧩 System Architecture
+
+```mermaid
+flowchart TD
+    A[User Prompt] --> B[Entropy Layer]
+    A --> C[Toxicity Layer\n(detoxify)]
+    A --> D[Phi-3 Boundary Scan]
+    B & C & D --> E[Combined Threat Score]
+    E --> F[Adaptive Geometric Shield\n(Pyramid → Sphere → Holographic)]
+    F --> G[Output Filter]
+    G --> H[Safe Response / Blocked]
+    
+    style F fill:#4B0082,stroke:#fff,stroke-width:2px
+
 
 ## 🚀 Quick Start
 
