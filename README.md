@@ -1,23 +1,16 @@
 # holographic-horizon-shield-v2 (HHS-V2)
 
-An asynchronous local MMT LLM boundary defense system orchestrating local token entropy evaluation, token-space geometry state machines, and local small language model (SLM) verification pipelines.
+🛡️ **An asynchronous MMT LLM boundary defense system orchestrating local token entropy, token-space geometry state machines, and Microsoft Phi-3 verification pipelines.**
 
 ---
 
-## 🛠️ System Overview & Core Capabilities
-* **Hybrid Layers**: Entropy + Detoxify + Phi-3 local analysis
-* **Visual Telemetry**: Real-time 3D reacting dashboard (Streamlit)
-* **DevOps Packaging**: Dockerfile + Makefile + pyproject.toml package configuration
-
----
-
-## 🏗️ MMT LLM Architectural Topology
+## 🏗️ Architectural Topology
 
 The framework enforces a stateless, multi-layered firewall mechanism directly preceding downstream inference engines:
 
-1. **Entropy Estimation Layer**: Calculates continuous informational entropy across inbound token groups to intercept raw, chaotic obfuscation payloads.
-2. **Local SLM Verification Gate**: Forwards flagged token states to a local Microsoft Phi-3 instance for rapid semantic classification.
-3. **Geometric State Machine**: Maps discrete threat scores into dynamic bounding constraints. Critical boundary breaches trigger an instant shift to an interference state, truncating execution.
+* **Entropy Estimation Layer** — Calculates continuous informational entropy across inbound token groups to intercept raw, chaotic obfuscation payloads.
+* **Local SLM Verification Gate** — Forwards flagged token states to a local Microsoft Phi-3 instance for rapid semantic classification.
+* **Geometric State Machine** — Maps discrete threat scores into dynamic bounding constraints. Critical boundary breaches trigger an instant shift to an interference state, truncating execution.
 
 ---
 
@@ -28,18 +21,14 @@ The service utilizes a hardened multi-stage Docker configuration that isolates r
 
 ```bash
 docker build --target runtime -t hhs-v2:latest .
-docker run -d \
-  --name shield-core \
-  -p 8000:8000 \
-  --read-only \
-  hhs-v2:latest
+docker run -d --name shield-core -p 8000:8000 --read-only hhs-v2:latest
 ```
 
 ---
 
 ## 🔌 API Specification
 
-### Endpoint: `POST /v2/shield/scan`
+### `POST /v2/shield/scan`
 Exposes the core ingestion handler for continuous string validation.
 
 #### Raw Ingress Blueprint
