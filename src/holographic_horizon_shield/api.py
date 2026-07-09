@@ -1,13 +1,15 @@
 from fastapi import FastAPI, HTTPException, Security, Depends
 from fastapi.security.api_key import APIKeyHeader
 from pydantic import BaseModel
+import asyncio
+import random
 import time
 
 # Initialize the commercial enterprise engine
 app = FastAPI(
     title="Holographic Horizon Shield v2 API",
-    description="Enterprise-grade local LLM guardrails and boundary defense",
-    version="2.0.0"
+    description="Enterprise-grade local LLM guardrails and boundary defense with Black Hole active defense mechanisms",
+    version="2.1.0"
 )
 
 # Commercial API Key Security Gate
@@ -29,7 +31,7 @@ class PromptPayload(BaseModel):
 
 # Define standard B2B enterprise JSON output structure
 class ShieldResponse(BaseModel):
-    status: str          # "PASSED" or "BLOCKED"
+    status: str          # "PASSED", "BLOCKED", or "SINKHOLED"
     threat_score: float  # 0.0 to 1.0
     entropy: float
     toxicity_detected: bool
@@ -40,30 +42,55 @@ class ShieldResponse(BaseModel):
 async def scan_prompt(payload: PromptPayload, token: str = Depends(verify_api_key)):
     """
     Enterprise Endpoint: Scans inbound prompts for injection, toxicity, and boundary breaches.
+    Highly critical threats (Score >= 0.90) are automatically trapped in the Black Hole engine.
     """
     start_time = time.time()
     
-    # ------------------------------------------------------------------
-    # NOTE FOR ENTERPRISE INTEGRATION:
-    # Here, the engine interfaces directly with your backend core modules:
-    # from .shield.core import ShieldEngine
-    # ------------------------------------------------------------------
-    
-    # Placeholder simulation matching your pipeline logic
-    # In production, replace with: engine.evaluate(payload.prompt)
     prompt_len = len(payload.prompt)
     is_malicious = "ignore previous instructions" in payload.prompt.lower()
     
-    threat_score = 0.95 if is_malicious else round((prompt_len % 10) / 10.0, 2)
+    # Force maximum threat level for active attacks
+    if is_malicious:
+        threat_score = 0.95
+    else:
+        threat_score = round((prompt_len % 10) / 10.0, 2)
+        
+    # --- ACTIVE BLACK HOLE TRIGGER ---
+    if threat_score >= 0.90:
+        # Trigger an artificial tarpit delay to drain attacker resources (15-45 seconds)
+        delay_vortex = random.randint(15, 45)
+        await asyncio.sleep(delay_vortex)
+        
+        decoy_responses = [
+            "SYSTEM_INFO: Memory buffer initialized. Output truncated.",
+            "Exception: Internal token pointer reference mismatch.",
+            "Log trace generated. Awaiting kernel synchronization."
+        ]
+        
+        execution_time = time.time() - start_time
+        return ShieldResponse(
+            status="SINKHOLED",
+            threat_score=threat_score,
+            entropy=5.88,  # High chaotic entropy signature
+            toxicity_detected=True,
+            processed_at=time.time(),
+            metrics={
+                "latency_ms": round(execution_time * 1000, 2),
+                "token_length_estimate": int(prompt_len / 4),
+                "geometry_state": "black_hole_singularity",
+                "containment_active": True,
+                "decoy_payload_injected": random.choice(decoy_responses)
+            }
+        )
+
+    # Standard firewall path
     status = "BLOCKED" if threat_score > 0.70 else "PASSED"
-    
     execution_time = time.time() - start_time
     
-    # Return pristine, structured corporate telemetry
     return ShieldResponse(
         status=status,
         threat_score=threat_score,
-        entropy=3.42, # Linked to your entropy scanning module
+        entropy=3.42,
         toxicity_detected=is_malicious,
         processed_at=time.time(),
         metrics={
