@@ -1,55 +1,7 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual env
-.venv
-venv/
-ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Env
-.env
-.env.local
-
-# Data/Logs
-*.log
-logs/
-*.pkl
-*.h5
-
-# Large files
-*.jpeg
-*.png
-*.jpg
-# (keep small ones or use LFS)
-
-# OS
-.DS_Store
-Thumbs.db
-
 fastapi>=0.110.0
 uvicorn>=0.28.0
+pydantic>=2.6.0
+numpy>=1.24.0
+scipy>=1.10.0
+transformers>=4.38.0
+torch>=2.2.0 --extra-index-url https://pytorch.org
