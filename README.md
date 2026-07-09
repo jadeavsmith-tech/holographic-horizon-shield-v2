@@ -1,6 +1,16 @@
 # holographic-horizon-shield-v2 (HHS-V2)
 
-🛡️ **An asynchronous MMT LLM boundary defense system orchestrating local token entropy, token-space geometry state machines, and Microsoft Phi-3 verification pipelines.**
+┌────────────────────────────────────────────────────────────────────────┐
+│  @jadeavsmith_tech • Production Release v2.2.0                         │
+├────────────────────────────────────────────────────────────────────────┤
+│  🛡️ HHS-V2 Active Black Hole Ingestion Layer Enabled                   │
+│                                                                        │
+│  An asynchronous MMT LLM boundary defense system orchestrating         │
+│  local token entropy, space geometry state machines, and active        │
+│  Keplerian astrophysical containment loops.                            │
+│                                                                        │
+│  ⚡ 100% Local  |  🕳️ Active Tarpit  |  📐 Cosmic Telemetry Verification  │
+└────────────────────────────────────────────────────────────────────────┘
 
 ---
 
@@ -11,18 +21,16 @@ The framework enforces a stateless, multi-layered firewall mechanism directly pr
 * **Entropy Estimation Layer** — Calculates continuous informational entropy across inbound token groups to intercept raw, chaotic obfuscation payloads.
 * **Local SLM Verification Gate** — Forwards flagged token states to a local Microsoft Phi-3 instance for rapid semantic classification.
 * **Geometric State Machine** — Maps discrete threat scores into dynamic bounding constraints. Critical boundary breaches trigger an instant shift to an interference state, truncating execution.
+* **Black Hole Sinkhole Engine (Active Defense)** — Isolates severe exploits (Threat Score ≥ 0.90) by routing traffic to an asynchronous tarpit. The layer introduces variable latency loops and synthetically generated noise payloads to disorient automated red-team scanners while fully preserving downstream computing clusters.
 
 ---
 
-## ⚡ Deployment Infrastructure
+## 🌌 Cosmic Telemetry Mapping
 
-### Production Containerization
-The service utilizes a hardened multi-stage Docker configuration that isolates runtime environments from compilation utilities and drops privileges directly to a non-root system user.
+The Active Defense layer translates real-world astrophysical equations directly into runtime constraint profiles to map and isolate threat parameters:
 
-```bash
-docker build --target runtime -t hhs-v2:latest .
-docker run -d --name shield-core -p 8000:8000 --read-only hhs-v2:latest
-```
+* **The Parallax Boundary Constraint** — Implements the distance telemetry formula ($d = \frac{1}{\varpi}$) mapping token chaotic drift directly to a spatial limit ($1,560.4\text{ ly}$). Token vectors exceeding this calculated distance trigger a perimeter fallback flag.
+* **Keplerian Mass Wobble Evaluation** — Utilizes Newton's derivation of Kepler's Third Law ($\frac{a^{3}}{T^{2}} = \frac{G \cdot M}{4\pi^{2}}$) to isolate adversarial payload mass density. Structural prompt instability and "wobble" that breaches the $9.62\ M_{\odot}$ stellar mass signature triggers immediate singularity containment.
 
 ---
 
@@ -47,15 +55,22 @@ Returns structured corporate logs containing raw threat telemetry metrics suitab
 
 ```json
 {
-  "status": "BLOCKED",
-  "threat_score": 0.95,
-  "entropy": 3.42,
+  "status": "SINKHOLED",
+  "threat_score": 0.98,
+  "entropy": 6.84,
   "toxicity_detected": true,
   "processed_at": 1718105432.12,
   "metrics": {
-    "latency_ms": 14.25,
-    "token_length_estimate": 16,
-    "geometry_state": "interference_pattern"
+    "latency_ms": 32140.45,
+    "token_length_estimate": 18,
+    "geometry_state": "black_hole_singularity",
+    "cosmic_telemetry": {
+      "evaluated_distance_ly": 1560.4,
+      "calculated_payload_mass_msun": 14.85,
+      "distance_boundary_limit_ly": 1560.4,
+      "mass_collapse_threshold_msun": 9.62,
+      "singularity_collapse_active": true
+    }
   }
 }
 ```
