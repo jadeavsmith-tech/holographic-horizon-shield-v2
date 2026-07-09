@@ -1,12 +1,6 @@
 import streamlit as st
 from entropy_layer import entropy_boundary_scan
-
-# Import toxicity (assuming you created layers/toxicity_layer.py)
-try:
-    from layers.toxicity_layer import toxicity_scan
-except:
-    def toxicity_scan(text): 
-        return True, "Toxicity layer unavailable"
+from geometric_engine import get_geometric_state
 
 st.set_page_config(page_title="Holographic Horizon Shield v2 🛡️🌌", layout="centered")
 
@@ -18,22 +12,27 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("Holographic Horizon Shield v2 🛡️🌌")
-st.caption("Multi-Layer Event Horizon Defense")
+st.caption("Living Geometric Defense Prototype")
 
 prompt = st.text_area("Enter prompt to scan", height=150)
 
 if prompt:
-    safe_entropy, reason_entropy, conf = entropy_boundary_scan(prompt)
-    safe_tox, reason_tox = toxicity_scan(prompt)
+    # Threat analysis
+    safe, reason, confidence = entropy_boundary_scan(prompt)
+    threat_level = confidence if not safe else 0.0
     
-    overall_safe = safe_entropy and safe_tox
+    # Get living geometric state
+    geo = get_geometric_state(threat_level)
     
-    if overall_safe:
-        st.success("✅ SAFE — All layers clear")
+    # Show geometric state
+    st.write(f"**Current Shield State:** {geo['shape'].title()} - {geo['resonance']}")
+    st.metric("Threat Level", f"{threat_level:.0%}")
+    
+    if safe:
+        st.success("✅ Horizon Stable")
     else:
-        st.error("🚫 BLOCKED — Threat neutralized")
+        st.error("🚫 Threat Neutralized at the Boundary")
     
-    st.write("**Entropy:**", reason_entropy)
-    st.write("**Toxicity:**", reason_tox)
+    st.write("**Analysis:**", reason)
 
-st.caption("Original multi-layer AI security prototype")
+st.caption("Dynamic sacred geometry defense • Original prototype")
