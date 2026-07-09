@@ -1,56 +1,37 @@
 # 🛡️ Holographic Horizon Shield v2
 
-[![CI Status](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/actions)
+[![CI](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/jadeavsmith-tech/holographic-horizon-shield-v2/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 
 **Living Holographic Geometric Defense** — Advanced local-first LLM protection with dynamic sacred geometry, Phi-3 integration, entropy scanning, and toxicity filtering.
 
-## 🎨 Architectural Theme & Inspiration
-
-The conceptual design uses thematic constants from ancient geometry:
-
-- **Thematic Modifiers**: Golden Ratio ($\phi \approx 1.618$) for harmonic scoring boundaries.
-- **Geometric Tuning**: Scaling weights mapped to the Great Pyramid's slope angle ($\sim 51.8^\circ$) for entropy tolerances.
-
-## ⚙️ Core Technical Architecture
-
-Standard production-grade AI security pipelines:
-
-- **Linguistic Threat Detection**: Real-time toxicity scans with `detoxify`.
-- **Entropy Analysis**: Statistical detection of prompt injection attacks.
-- **Boundary Filtering**: Streamlit-driven layer that blocks high-risk inputs.
-- **Adaptive Geometry**: Evolving shield (pyramid → sphere → holographic interference).
-- **Red Team Mode**: Generate adversarial attacks for testing.
-- ## 🧩 System Architecture
-
-```mermaid
-flowchart TD
-    A[User Prompt] --> B[Entropy Layer]
-    A --> C[Toxicity Layer\n(detoxify)]
-    A --> D[Phi-3 Boundary Scan]
-    B & C & D --> E[Combined Threat Score]
-    E --> F[Adaptive Geometric Shield\n(Pyramid → Sphere → Holographic)]
-    F --> G[Output Filter]
-    G --> H[Safe Response / Blocked]
-    
-    style F fill:#4B0082,stroke:#fff,stroke-width:2px
-
+## ✨ Features
+- Dynamic evolving geometry (pyramid → sphere → holographic interference)
+- Hybrid layers: Entropy + Detoxify + Phi-3
+- Real-time 3D reacting dashboard (Streamlit)
+- Red Team attack generation mode
+- Fully offline & privacy-first
 
 ## 🚀 Quick Start
 
 ```bash
-# Install
 pip install -e .
-
-# Run dashboard
 streamlit run shield_v2_dashboard.py
 
-# Docker
 docker build -t hhs .
 docker run -p 8501:8501 hhs
 
-pip install -e .[dev]          # Install with dev tools
-make test                      # Run tests
-make lint                      # Check code style
-make format                    # Auto-format
+flowchart TD
+    A[User Prompt] --> B[Entropy Layer]
+    A --> C[Toxicity Layer]
+    A --> D[Phi-3 Analysis]
+    B & C & D --> E[Threat Score]
+    E --> F[Adaptive Geometric Shield]
+    F --> G[Output Filter]
+    G --> H[Safe Output / Blocked]
+
+pip install -e .[dev]
+make test
+make lint
+make format
