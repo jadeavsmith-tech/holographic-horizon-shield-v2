@@ -1,16 +1,14 @@
 # Holographic Horizon Shield v2 🛡️🌌
 
-**Original hybrid AI security prototype** — visual "event horizon" defense for LLMs.
+**Living Holographic Geometric Defense** — the first AI security prototype where the defense layer itself is a dynamic sacred geometry structure that evolves in real-time.
 
-Threats are detected and neutralized at the boundary using quantum-inspired entropy, Phi-3 semantic analysis, and toxicity scanning.
-
-### Key Features
-- Reacting 3D holographic shield visualization
-- Multi-layer defense (Entropy + Phi-3 + Toxicity)
-- OWASP LLM Top 10 awareness
-- Built-in Red Team attack generator
+### Core Innovation
+- Dynamic geometry that morphs based on threat (pyramid → sphere → holographic interference)
+- Hybrid layers: Entropy + Phi-3 + Toxicity
+- Self-evolving memory — the shield learns from attacks and grows stronger
+- Reacting 3D visualization
+- OWASP awareness + Red Team mode
 - Fully local, offline, privacy-first
-- Docker support
 
 ### Quick Start
 
@@ -19,4 +17,3 @@ pip install -r requirements.txt
 streamlit run shield_v2_dashboard.py
 docker build -t horizon-shield .
 docker run -p 8501:8501 horizon-shield
-python red_team_mode.py
