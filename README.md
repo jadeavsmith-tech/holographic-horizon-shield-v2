@@ -1,19 +1,12 @@
-# Holographic Horizon Shield v2 🛡️🌌
+# 🛡️ Holographic Horizon Shield v2
 
-**Living Holographic Geometric Defense** — the first AI security prototype where the defense layer itself is a dynamic sacred geometry structure that evolves in real-time.
+## 🎨 Architectural Theme & Inspiration
+The conceptual design of this shield uses thematic constants derived from ancient geometry to anchor its safety boundaries. It implements scalar modifiers based on:
+* **Thematic Modifiers**: Golden Ratio ($\phi \approx 1.618$) for harmonic scoring boundaries.
+* **Geometric Tuning**: Scaling weights mapped to the Great Pyramid's slope angle ($\sim 51.8^\circ$) to establish baseline entropy tolerances.
 
-### Core Innovation
-- Dynamic geometry that morphs based on threat (pyramid → sphere → holographic interference)
-- Hybrid layers: Entropy + Phi-3 + Toxicity
-- Self-evolving memory — the shield learns from attacks and grows stronger
-- Reacting 3D visualization
-- OWASP awareness + Red Team mode
-- Fully local, offline, privacy-first
-
-### Quick Start
-
-```bash
-pip install -r requirements.txt
-streamlit run shield_v2_dashboard.py
-docker build -t horizon-shield .
-docker run -p 8501:8501 horizon-shield
+## ⚙️ Core Technical Architecture (Python Mechanics)
+Behind the geometric framework, the system runs standard, production-grade AI security pipelines:
+* **Linguistic Threat Detection**: The system imports the `detoxify` library to run real-time toxicity scans against incoming prompt vectors.
+* **Entropy Analysis**: Computes statistical data distribution across user inputs to detect unstructured, erratic prompt injection attacks.
+* **Boundary Filtering**: A Streamlit-driven evaluation layer that blocks execution if inputs cross the combined entropy and toxicity thresholds.
