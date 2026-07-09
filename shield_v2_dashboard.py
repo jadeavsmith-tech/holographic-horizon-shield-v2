@@ -12,27 +12,27 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("Holographic Horizon Shield v2 🛡️🌌")
-st.caption("Living Geometric Defense Prototype")
+st.caption("Living Geometric Defense • Watch it react")
 
 prompt = st.text_area("Enter prompt to scan", height=150)
 
 if prompt:
-    # Threat analysis
     safe, reason, confidence = entropy_boundary_scan(prompt)
     threat_level = confidence if not safe else 0.0
-    
-    # Get living geometric state
     geo = get_geometric_state(threat_level)
     
-    # Show geometric state
-    st.write(f"**Current Shield State:** {geo['shape'].title()} - {geo['resonance']}")
+    # Show state
     st.metric("Threat Level", f"{threat_level:.0%}")
+    st.write(f"**Shield Form:** {geo['shape'].title()} — {geo['resonance']}")
     
     if safe:
         st.success("✅ Horizon Stable")
     else:
-        st.error("🚫 Threat Neutralized at the Boundary")
+        st.error("🚫 Threat Neutralized")
     
-    st.write("**Analysis:**", reason)
+    st.write("**Reason:**", reason)
 
-st.caption("Dynamic sacred geometry defense • Original prototype")
+# 3D Reacting Shield (basic version — enhanced later)
+st.caption("The shield dynamically changes based on threat. Full 3D reaction coming in next update.")
+
+st.caption("Original Living Holographic Geometric Defense Prototype")
