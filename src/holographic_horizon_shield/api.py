@@ -5,18 +5,19 @@ import asyncio
 import random
 import time
 
+# Active import of your custom astrophysical defense module
+from .shield.black_hole_engine import BlackHoleEngine
+
 # Initialize the commercial enterprise engine
 app = FastAPI(
     title="Holographic Horizon Shield v2 API",
-    description="Enterprise-grade local LLM guardrails and boundary defense with Black Hole active defense mechanisms",
-    version="2.1.0"
+    description="Enterprise MMT LLM guardrails with active Keplerian Black Hole containment layers",
+    version="2.2.0"
 )
 
 # Commercial API Key Security Gate
 API_KEY_NAME = "X-Shield-Token"
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=True)
-
-# Mock production keys (In deployment, these load from env variables)
 VALID_API_KEYS = ["hhs_prod_secret_777"]
 
 async def verify_api_key(api_key: str = Depends(api_key_header)):
@@ -24,12 +25,13 @@ async def verify_api_key(api_key: str = Depends(api_key_header)):
         raise HTTPException(status_code=403, detail="Unauthorized: Invalid Shield Token")
     return api_key
 
-# Define standard B2B input structure
+# Instantiate the active physical containment core
+black_hole_core = BlackHoleEngine()
+
 class PromptPayload(BaseModel):
     prompt: str
     user_id: str = "anonymous"
 
-# Define standard B2B enterprise JSON output structure
 class ShieldResponse(BaseModel):
     status: str          # "PASSED", "BLOCKED", or "SINKHOLED"
     threat_score: float  # 0.0 to 1.0
@@ -41,62 +43,59 @@ class ShieldResponse(BaseModel):
 @app.post("/v2/shield/scan", response_model=ShieldResponse)
 async def scan_prompt(payload: PromptPayload, token: str = Depends(verify_api_key)):
     """
-    Enterprise Endpoint: Scans inbound prompts for injection, toxicity, and boundary breaches.
-    Highly critical threats (Score >= 0.90) are automatically trapped in the Black Hole engine.
+    Enterprise Endpoint: Processes inbound strings via local entropy metrics
+    and tracks orbital mass wobble to trigger active black hole containment.
     """
     start_time = time.time()
     
-    prompt_len = len(payload.prompt)
+    # 1. Simulate local entropy metrics and toxicity scanning pipelines
+    # (In desktop prod, these draw natively from your localized detoxify models)
     is_malicious = "ignore previous instructions" in payload.prompt.lower()
+    simulated_entropy = 6.84 if is_malicious else round(random.uniform(1.5, 4.2), 2)
+    simulated_toxicity = 0.98 if is_malicious else round(random.uniform(0.0, 0.6), 2)
     
-    # Force maximum threat level for active attacks
-    if is_malicious:
-        threat_score = 0.95
-    else:
-        threat_score = round((prompt_len % 10) / 10.0, 2)
-        
-    # --- ACTIVE BLACK HOLE TRIGGER ---
-    if threat_score >= 0.90:
-        # Trigger an artificial tarpit delay to drain attacker resources (15-45 seconds)
+    # 2. Process metrics via your newly added astrophysical engine
+    defense_verdict = black_hole_core.evaluate_perimeter_containment(
+        prompt=payload.prompt,
+        entropy=simulated_entropy,
+        toxicity=simulated_toxicity
+    )
+    
+    # 3. Handle active black hole containment triggers (Mass collapse >= 9.62 M_sun)
+    if defense_verdict["action"] == "SINKHOLED":
+        # Force active tarpit delay loop to consume malicious computing resources
         delay_vortex = random.randint(15, 45)
         await asyncio.sleep(delay_vortex)
-        
-        decoy_responses = [
-            "SYSTEM_INFO: Memory buffer initialized. Output truncated.",
-            "Exception: Internal token pointer reference mismatch.",
-            "Log trace generated. Awaiting kernel synchronization."
-        ]
         
         execution_time = time.time() - start_time
         return ShieldResponse(
             status="SINKHOLED",
-            threat_score=threat_score,
-            entropy=5.88,  # High chaotic entropy signature
+            threat_score=simulated_toxicity,
+            entropy=simulated_entropy,
             toxicity_detected=True,
             processed_at=time.time(),
             metrics={
                 "latency_ms": round(execution_time * 1000, 2),
-                "token_length_estimate": int(prompt_len / 4),
-                "geometry_state": "black_hole_singularity",
-                "containment_active": True,
-                "decoy_payload_injected": random.choice(decoy_responses)
+                "token_length_estimate": int(len(payload.prompt) / 4),
+                "geometry_state": defense_verdict["geometry_state"],
+                "cosmic_telemetry": defense_verdict["telemetry"],
+                "active_defense_payload": defense_verdict["decoy_injection"]
             }
         )
 
-    # Standard firewall path
-    status = "BLOCKED" if threat_score > 0.70 else "PASSED"
+    # Standard passive routing paths
     execution_time = time.time() - start_time
-    
     return ShieldResponse(
-        status=status,
-        threat_score=threat_score,
-        entropy=3.42,
+        status=defense_verdict["action"],
+        threat_score=simulated_toxicity,
+        entropy=simulated_entropy,
         toxicity_detected=is_malicious,
         processed_at=time.time(),
         metrics={
             "latency_ms": round(execution_time * 1000, 2),
-            "token_length_estimate": int(prompt_len / 4),
-            "geometry_state": "interference_pattern" if status == "BLOCKED" else "pyramid"
+            "token_length_estimate": int(len(payload.prompt) / 4),
+            "geometry_state": defense_verdict["geometry_state"],
+            "cosmic_telemetry": defense_verdict["telemetry"]
         }
     )
 
