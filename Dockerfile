@@ -1,46 +1,41 @@
 # ==============================================================================
-# STAGE 1: Build & Dependency Isolation (Keeps production image lean)
+# STAGE 1: Build & Dependency Isolation
 # ==============================================================================
 FROM python:3.11-slim AS builder
 
 WORKDIR /build
 
-# Install system compilation dependencies securely
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Cache and build python wheels to prevent re-downloads
 COPY requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
-
 # ==============================================================================
-# STAGE 2: Secure Runtime (The actual minimal container shipped to clients)
+# STAGE 2: Secure Runtime Environment
 # ==============================================================================
 FROM python:3.11-slim AS runtime
 
 WORKDIR /app
 
-# Copy built dependencies and path variables from the builder stage
+# Pull isolated system libraries and configuration paths from builder
 COPY --from=builder /root/.local /root/.local
 ENV PATH=/root/.local/bin:$PATH
 ENV PYTHONUNBUFFERED=1
 
-# Copy the streamlined enterprise source code tree
-COPY src/ /app/src/
+# Copy your real mathematical script directly from the repository root
+COPY app.py /app/app.py
 
-# Create a non-privileged system user for security compliance (Bans root execution)
+# Restrict runtime execution to a non-privileged user profile for AppSec compliance
 RUN useradd -u 8888 shielduser && chown -R shielduser:shielduser /app
 USER shielduser
 
-# Expose standard production port
 EXPOSE 8000
 
-# Automated Health Check loop for cloud orchestrators (Kubernetes/AWS ECS)
+# Automated operational polling route for local load balancers
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:8000/health || exit 1
 
-# Production Entrypoint: Launches your high-performance FastAPI web engine
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
-
+# Launches the production server using your direct root script mapping
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
