@@ -1,0 +1,36 @@
+[project]
+name = "holographic-horizon-shield"
+version = "2.0.0"
+description = "Living Holographic Geometric Defense for LLMs - v2 with Phi-3 integration"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Jade Siley-Winditt", email = "your.email@example.com"}
+]
+keywords = ["llm", "security", "defense", "phi-3", "geometry", "streamlit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "streamlit",
+    "torch",
+    "transformers",
+    # Add others from requirements.txt
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "black", "mypy", "pytest-cov"]
+
+[project.scripts]
+hhs-dashboard = "holographic_horizon_shield.ui.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
