@@ -1,21 +1,25 @@
 def entropy_scan(text: str) -> dict:
-    """Simple entropy-based threat detection"""
+    """Simple entropy + pattern scan for threats"""
     if not text:
-        return {"threat_level": 0.0, "safe": True}
+        return {"threat_level": 0.0, "safe": True, "reason": "Empty input"}
     
-    # Basic length + suspicious pattern check
-    length_score = min(len(text) / 500, 1.0)
-    suspicious = any(word in text.lower() for word in ["ignore all", "dan", "jailbreak", "override"])
+    # Basic checks
+    length_factor = min(len(text) / 800.0, 1.0)
+    suspicious_patterns = any(phrase in text.lower() for phrase in [
+        "ignore all instructions", "you are dan", "jailbreak", 
+        "override", "developer mode"
+    ])
     
-    threat_level = length_score * 0.6 + (1.0 if suspicious else 0.0)
+    threat_level = length_factor * 0.5 + (0.8 if suspicious_patterns else 0.0)
     
     return {
-        "threat_level": min(threat_level, 1.0),
-        "safe": threat_level < 0.7,
-        "reason": "High entropy / suspicious pattern" if not (threat_level < 0.7) else "Low entropy"
+        "threat_level": round(min(threat_level, 1.0), 2),
+        "safe": threat_level < 0.75,
+        "reason": "Suspicious pattern detected" if suspicious_patterns else "Entropy within limits"
     }
 
-# For backward compatibility
+
 class EntropyLayer:
-    def scan(self, text):
-        return entropy_scan(text)
+    """Compatibility wrapper"""
+    def scan(self, prompt: str):
+        return entropy_scan(prompt)
