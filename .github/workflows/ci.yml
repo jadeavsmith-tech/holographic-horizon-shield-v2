@@ -1,29 +1,29 @@
-name: CI-Test
+ name: CI-Test
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+..push:
+....branches: [ main ]
+..pull_request:
+....branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+..build:
+....runs-on: ubuntu-latest
+....steps:
+....- name: Checkout Code
+......uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+....- name: Set up Python
+......uses: actions/setup-python@v5
+......with:
+........python-version: '3.11'
 
-    - name: Install Requirements
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+....- name: Install Requirements
+......run: |
+........python -m pip install --upgrade pip
+........if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run App Tests
-      run: |
-        pip install pytest
-        pytest test_shield.py
+....- name: Run App Tests
+......run: |
+........pip install pytest
+........pytest test_shield.py
