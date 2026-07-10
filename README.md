@@ -70,5 +70,24 @@ This diagram illustrates how an incoming text string moves through your astrophy
                                                                   ▼
                                                       🕳️ [STATUS: SINKHOLED]
                                                            (Attacker Connection Drained)
-```
+
+## ❤️ Sponsors
+
+If you or your company relies on **Holographic Horizon Shield** to secure your LLMs, please consider supporting its continuous development. Sponsoring helps fund edge-case vulnerability research, rapid framework integrations, and active maintenance.
+
+[👉 Become a Sponsor on GitHub](https://github.com)
+
+### 🏢 Corporate Backers
+*Is your business using this shield in production? [Back us on GitHub Sponsors](https://github.com) to feature your logo here.*
+
+| Gold Sponsor (Link + Logo) | Silver Sponsor (Link + Logo) |
+| :---: | :---: |
+| [<img src="https://githubusercontent.com" width="200" alt="Your Company">](https://github.com) | [<img src="https://githubusercontent.com" width="150" alt="Your Company">](https://github.com) |
+| Your Company Name Here | Your Company Name Here |
+
+### 🚀 Individual Supporters
+A massive thank you to the developers helping keep this project open-source:
+
+<a href="https://github.com"><img src="https://opencollective.com" alt="Individual Backers" /></a>
+
 
