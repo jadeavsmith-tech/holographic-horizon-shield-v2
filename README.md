@@ -1,3 +1,22 @@
+# Holographic Horizon Shield V2 (HHS-V2) 🛡🌌
+
+---
+
+### 📊 Live Project Traction (Last 14 Days)
+![Traffic](https://shields.io)
+
+📢 **UPDATE:** HHS-V2 has officially been submitted for peer review and crowdfunding on Experiment.com! We are launching a 12-week infrastructure benchmarking campaign to test this Keplerian algorithmic proxy against 5,000+ concurrent live requests. 
+📬 **[Click here to view our research profile and sign up for launch alerts!](https://experiment.com)**
+
+---
+
+### ⚠️ Project Status: Alpha Prototype (V2)
+HHS-V2 is an active independent research project. The core Keplerian calculations and stateless proxy routing layers are operational. High-concurrency scalability (>5,000 RPS) and mathematical coefficient calibration for dense multi-language code inputs are currently under active evaluation. **Do not deploy in mission-critical enterprise production environments without isolated sandbox testing.**
+
+👤 **Solo Project Notice:** This architecture is designed and maintained entirely by a single researcher. While I welcome community bug reports and issues, code modifications and issue triage are batched to keep our 12-week core research timeline on track.
+
+---
+
 # 🛡️ Holographic Horizon Shield V2 (HHS-V2)
 
 Production Release v2.2.0 • 🛡️ Core Astrophysical Perimeter Security Engine
