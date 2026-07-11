@@ -1,0 +1,6 @@
+holographic-horizon-shield-v2/
+│
+├── config.json         <-- Create this new file here
+├── guardrails.py       <-- Create this new file here
+├── test_harness.py     <-- Create this new file here
+└── [your existing main scanner files]
