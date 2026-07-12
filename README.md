@@ -89,6 +89,36 @@ This diagram illustrates how an incoming text string moves through your astrophy
                                                                   ▼
                                                       🕳️ [STATUS: SINKHOLED]
                                                            (Attacker Connection Drained)
+## 🚀 Production Deployment with Docker Compose
+
+Run the entire astrophysical proxy stack locally using Docker. This ensures all async network configurations, python dependencies, and honeypot layers execute in an isolated production environment.
+
+### 📋 Prerequisites
+* Install [Docker](https://docker.com)
+* Install [Docker Compose](https://docker.com)
+
+### ⚡ Quick Start Command
+Spin up the ecosystem in detached mode:
+
+```bash
+docker compose up -d --build
+```
+
+### 🔍 Verification & Health Telemetry
+Monitor container health logs to ensure the Keplerian boundary scans are active:
+
+```bash
+docker compose logs -f horizon-shield-proxy
+```
+
+Test the endpoint payload delivery directly via terminal to verify uptime:
+```bash
+curl -X GET http://localhost:8000/health
+```
+
+<br />
+
+## ❤ Sponsors
 
 ## ❤️ Sponsors
 
