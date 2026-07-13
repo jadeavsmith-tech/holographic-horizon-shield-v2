@@ -13,7 +13,7 @@
 ### ⚠️ Project Status: Alpha Prototype (V2)
 HHS-V2 is an active independent research project. The core Keplerian calculations and stateless proxy routing layers are operational. High-concurrency scalability (>5,000 RPS) and mathematical coefficient calibration for dense multi-language code inputs are currently under active evaluation. **Do not deploy in mission-critical enterprise production environments without isolated sandbox testing.**
 
-👤 **Solo Project Notice:** This architecture is designed and maintained entirely by a single researcher. While I welcome community bug reports and issues, code modifications and issue triage are batched to keep our 12-week core research timeline on track.
+👤 **Solo Project Notice:** This architecture is designed and maintained entirely by a single researcher. While I welcome community bug reports and issues, code modifications and issue triage are batched to keep my 12-week core research timeline on track.
 
 ---
 
