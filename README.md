@@ -118,8 +118,6 @@ curl -X GET http://localhost:8000/health
 
 <br />
 
-## ❤ Sponsors
-
 ## ❤️ Sponsors
 
 If you or your company relies on **Holographic Horizon Shield** to secure your LLMs, please consider supporting its continuous development. Sponsoring helps fund edge-case vulnerability research, rapid framework integrations, and active maintenance.
