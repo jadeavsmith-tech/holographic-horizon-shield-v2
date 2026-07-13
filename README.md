@@ -5,7 +5,7 @@
 ### 📊 Live Project Traction (Last 14 Days)
 ![Traffic](https://shields.io)
 
-📢 **UPDATE:** HHS-V2 has officially been submitted for peer review and crowdfunding on Experiment.com! We are launching a 12-week infrastructure benchmarking campaign to test this Keplerian algorithmic proxy against 5,000+ concurrent live requests. 
+📢 **UPDATE:** HHS-V2 has officially been submitted for peer review and crowdfunding on Experiment.com! I am launching a 12-week infrastructure benchmarking campaign to test this Keplerian algorithmic proxy against 5,000+ concurrent live requests. 
 📬 **[Click here to view our research profile and sign up for launch alerts!](https://experiment.com)**
 
 ---
