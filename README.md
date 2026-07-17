@@ -185,4 +185,5 @@ A massive thank you to the developers helping keep this project open-source:
 
 <a href="https://github.com"><img src="https://opencollective.com" alt="Individual Backers" /></a>
 
+Created by Jade Siley-Winditt (Phoenix-Risingseer)
 
